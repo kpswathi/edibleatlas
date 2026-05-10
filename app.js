@@ -190,15 +190,31 @@ function init() {
 
     startJourneyBtn?.addEventListener('click', () => {
         introModal.style.display = 'none';
-        // Automate zooming to India and starting Appam trail
+        
+        // Ensure data is loaded
+        if (!DB["India"]) {
+            console.error("India data not found in DB");
+            return;
+        }
+
+        // Automate starting Appam trail
         selectedCountry = "India";
         selectedDishName = "Appam";
+        
+        // Show cinematic zoom/transition
         zoomToCountry(null, "India");
         
-        // Overwrite the default openSetup to start the journey immediately for Appam
+        // Use a longer timeout to ensure zoom/openSetup finish
         setTimeout(() => {
-            startDishJourney(10); // Start with a good 10-stop journey
-        }, 1200);
+            const countryData = DB[selectedCountry];
+            const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
+            
+            if (targetDish) {
+                startDishJourney(10);
+            } else {
+                console.error("Appam dish not found in India");
+            }
+        }, 1500);
     });
     
     document.getElementById('reveal-next-btn')?.addEventListener('click', () => {

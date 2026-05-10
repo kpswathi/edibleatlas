@@ -278,7 +278,14 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 
 /* Buttons */
 button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; padding: 16px 24px; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: var(--transition); width: 100%; }
-.primary-btn { background: var(--primary-color); color: white; box-shadow: 0 6px 0 var(--primary-hover); border: 2px solid var(--primary-hover); }
+.primary-btn { 
+    background: #d35400; 
+    color: white; 
+    box-shadow: 0 4px 0 #a04000; 
+    border: none;
+    font-family: 'Crimson Pro', serif;
+    font-weight: bold;
+}
 .primary-btn:active { transform: translateY(6px); box-shadow: 0 0 0 transparent; }
 .secondary-btn { background: var(--secondary-color); color: white; box-shadow: 0 6px 0 var(--secondary-hover); border: 2px solid var(--secondary-hover); }
 .secondary-btn:active { transform: translateY(6px); box-shadow: 0 0 0 transparent; }
@@ -406,27 +413,28 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
 
 /* Cinematic UI Elements */
 .cinematic-btn {
-    background: rgba(43, 16, 85, 0.9);
+    background: #d35400;
     color: #fdfaf6;
-    border: 2px solid var(--secondary-color);
-    padding: 14px 40px;
+    border: 2px solid #f4d06f;
+    padding: 6px 20px;
     font-family: 'Crimson Pro', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     border-radius: 40px;
     cursor: pointer;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    box-shadow: 0 0 20px rgba(244, 208, 111, 0.3);
-    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.4);
+    transition: all 0.3s ease;
     backdrop-filter: blur(8px);
 }
 
 .cinematic-btn:hover {
-    background: var(--primary-color);
+    background: #d35400;
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(244, 208, 111, 0.5);
+    box-shadow: 0 6px 15px rgba(211, 84, 0, 0.5);
     border-color: #fff;
+    filter: brightness(1.1);
 }
 
 .modal-overlay {

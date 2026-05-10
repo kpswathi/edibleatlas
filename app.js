@@ -147,42 +147,17 @@ function init() {
         if (soundEnabled) initAudio(); 
     });
     
-    // Mode Selection
-    document.getElementById('mode-dish-btn').addEventListener('click', () => {
-        explorationMode = 'dish';
-        document.getElementById('mode-instruction').style.display = 'block';
-        document.getElementById('route-svg').style.opacity = '0';
-        
-        document.querySelectorAll('.map-marker').forEach(m => m.style.pointerEvents = 'auto');
-    });
-
-    document.getElementById('mode-route-btn').addEventListener('click', () => {
-        explorationMode = 'route';
-        document.getElementById('mode-instruction').style.display = 'none';
-        
-        document.getElementById('route-svg').style.opacity = '1';
-        
-        // Update Route setup screen dynamically based on available routes
-        const badge = document.querySelector('#route-setup-screen .country-badge');
-        badge.textContent = "🌍 Indian Ocean Route";
-        const title = document.querySelector('#route-setup-screen h2');
-        title.textContent = "The Indian Ocean Trade Network";
-        const desc = document.querySelector('#route-setup-screen p');
-        desc.textContent = "Follow the maritime journey connecting South Asia and Southeast Asia.";
-
-        showScreen('routeSetup');
-    });
-
+    // Set default exploration mode to dish so markers are instantly clickable
+    explorationMode = 'dish';
+    
     document.querySelectorAll('.map-marker').forEach(marker => {
         marker.addEventListener('click', (e) => {
-            if (explorationMode === 'dish') {
-                const country = e.currentTarget.dataset.country;
-                if (!DB[country]) {
-                    alert(`Content for ${country} is not yet available in content.json!`);
-                    return;
-                }
-                zoomToCountry(e.currentTarget, country);
+            const country = e.currentTarget.dataset.country;
+            if (!DB[country] || DB[country].dishes.length === 0) {
+                alert(`Content for ${country} is not yet available in content.json!`);
+                return;
             }
+            zoomToCountry(e.currentTarget, country);
         });
     });
 

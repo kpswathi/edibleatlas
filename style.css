@@ -83,9 +83,14 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 }
 
 #click-marker-text {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
+    font-family: 'Calistoga', serif;
+    font-size: 1.1rem;
     font-weight: bold !important;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 6px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    display: inline-block;
 }
 
 .marker-pulse {

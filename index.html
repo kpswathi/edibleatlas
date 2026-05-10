@@ -7,7 +7,7 @@
     <meta name="description" content="Embark on an interactive story-driven culinary journey!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Dancing+Script:wght@600;700&family=Italianno&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Crimson+Pro:wght@600;700&family=Dancing+Script:wght@600;700&family=Italianno&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +18,8 @@
             <svg id="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; opacity: 0; transition: opacity 1s;">
                 <!-- India to Sri Lanka -->
                 <path d="M 68 47 Q 69 49 69 52" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
-                <!-- Sri Lanka to Myanmar -->
-                <path d="M 69 52 Q 72 49 73 45" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
-                <!-- Myanmar to Malaysia -->
-                <path d="M 73 45 Q 75 49 76 53" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
+                <!-- Sri Lanka to Malaysia -->
+                <path d="M 69 52 Q 72 52 76 53" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
                 <!-- Malaysia to Singapore -->
                 <path d="M 76 53 Q 76 54 76.5 55" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
                 <!-- Singapore to Indonesia -->
@@ -36,10 +34,6 @@
             <div class="map-marker" data-country="Sri Lanka" style="top: 53%; left: 69%; pointer-events: auto;">
                 <div class="marker-pulse"></div>
                 <div class="marker-icon">🇱🇰 🥥</div>
-            </div>
-            <div class="map-marker" data-country="Myanmar" style="top: 45%; left: 73%; pointer-events: auto;">
-                <div class="marker-pulse"></div>
-                <div class="marker-icon">🇲🇲 🍚</div>
             </div>
             <div class="map-marker" data-country="Malaysia" style="top: 53%; left: 76%; pointer-events: auto;">
                 <div class="marker-pulse"></div>

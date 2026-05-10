@@ -179,65 +179,6 @@ function init() {
     document.getElementById('quit-reveal-btn')?.addEventListener('click', returnHome);
     document.getElementById('back-home-btn')?.addEventListener('click', returnHome);
 
-    // Cinematic Journey Flow
-    const beginTrigger = document.getElementById('begin-journey-trigger');
-    const introModal = document.getElementById('intro-modal');
-    const startJourneyBtn = document.getElementById('start-journey-btn');
-
-    beginTrigger?.addEventListener('click', () => {
-        introModal.style.display = 'flex';
-    });
-
-    startJourneyBtn?.addEventListener('click', () => {
-        introModal.style.display = 'none';
-        
-        // Ensure data is loaded
-        if (!DB["India"] || DB["India"].dishes.length === 0) {
-            alert("The atlas is still gathering its stories. Please wait a moment and try again!");
-            return;
-        }
-
-        // Automate starting Appam trail
-        selectedCountry = "India";
-        selectedDishName = "Appam";
-        
-        // Zoom transition
-        zoomToCountry(null, "India");
-        
-        // Explicitly start the journey after the zoom finishes
-        setTimeout(() => {
-            const countryData = DB["India"];
-            const targetDish = countryData.dishes.find(d => d.name === "Appam");
-            
-            if (targetDish) {
-                // Manually trigger the journey setup
-                correctCount = 0;
-                currentQuestionIndex = 0;
-                
-                let availableChapters = [...targetDish.chapters];
-                shuffleArray(availableChapters);
-                availableChapters = availableChapters.slice(0, 10);
-                
-                journeyQueue = availableChapters.map(ch => ({
-                    dishName: targetDish.name,
-                    dishEmoji: targetDish.emoji,
-                    countryEmoji: countryData.emoji,
-                    countryName: "India",
-                    phase: ch.phase,
-                    text: ch.text,
-                    q: ch.q,
-                    options: ch.options,
-                    a: ch.a,
-                    postAnswerTrivia: ch.postAnswerTrivia
-                }));
-                
-                document.getElementById('journey-dish').textContent = `${targetDish.emoji} ${targetDish.name} Trail`;
-                renderQuestion();
-                showScreen('game');
-            }
-        }, 1600);
-    });
-
     document.getElementById('reveal-next-btn')?.addEventListener('click', () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < journeyQueue.length) {

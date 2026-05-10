@@ -191,6 +191,156 @@
                     "trivia": "Urbanization changed not just cooking speed — but also flavor."
                 }
             ]
+        },
+        {
+            "country": "Sri Lanka",
+            "region": "Coastal Sri Lanka",
+            "dish": "Appa (Hoppers)",
+            "route": "Indian Ocean Trade Network",
+            "description": "Explore how appam evolved into Sri Lankan hoppers through centuries of migration, maritime trade, and coastal food culture.",
+            "history": "Sri Lankan hoppers, known locally as appa, are closely connected to the appam traditions of Kerala and Tamil Nadu. Historians believe these dishes evolved together through Indian Ocean trade routes linking South India and Sri Lanka. Over time, local adaptations like egg hoppers became iconic parts of Sri Lankan street food culture.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "Shared Culinary Origins",
+                    "difficulty": "easy",
+                    "question": "Why do historians believe Sri Lankan hoppers and Kerala appam share a connected history rather than being separate inventions?",
+                    "options": [
+                        "Both were invented during British rule",
+                        "Both use wheat flour and butter",
+                        "Both use fermented rice batter, coconut milk, similar names (appa/appam), and developed through Indian Ocean trade connections",
+                        "Both originated in North India"
+                    ],
+                    "answer": "Both use fermented rice batter, coconut milk, similar names (appa/appam), and developed through Indian Ocean trade connections",
+                    "trivia": "The similarity between appa in Sri Lanka and appam in Kerala is considered evidence of centuries of cultural exchange across the Indian Ocean."
+                },
+                {
+                    "chapter": 2,
+                    "title": "Language Across the Sea",
+                    "difficulty": "easy",
+                    "question": "What does the word “appa” surviving in Sri Lanka reveal about ancient cultural exchange?",
+                    "options": [
+                        "Sri Lanka was isolated from India",
+                        "Coconut cultivation began in Europe",
+                        "Food traditions and language crossed the sea between South India and Sri Lanka for centuries",
+                        "Hoppers were introduced only during colonial rule"
+                    ],
+                    "answer": "Food traditions and language crossed the sea between South India and Sri Lanka for centuries",
+                    "trivia": "For most of history, the sea between Kerala and Sri Lanka acted more like a trade bridge than a barrier."
+                },
+                {
+                    "chapter": 3,
+                    "title": "Street Food Evolution",
+                    "difficulty": "medium",
+                    "question": "Why did hoppers become ideal street food in Sri Lanka?",
+                    "options": [
+                        "They lasted for months without spoiling",
+                        "They required expensive spices",
+                        "They were eaten only by royalty",
+                        "Rice and coconuts were abundant, fermentation was inexpensive, and the dish cooked quickly for workers and travelers"
+                    ],
+                    "answer": "Rice and coconuts were abundant, fermentation was inexpensive, and the dish cooked quickly for workers and travelers",
+                    "trivia": "Egg hoppers later became one of Sri Lanka’s most famous late-night street foods."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Cuisine Transformation",
+                    "difficulty": "medium",
+                    "question": "What does the egg hopper reveal about how cuisines evolve over time?",
+                    "options": [
+                        "Ancient recipes never change",
+                        "All hopper recipes came from Europe",
+                        "Imported food traditions adapt locally and become entirely new iconic dishes",
+                        "Sri Lankan cuisine avoided outside influence"
+                    ],
+                    "answer": "Imported food traditions adapt locally and become entirely new iconic dishes",
+                    "trivia": "Today many people outside Sri Lanka assume egg hoppers were always part of the original recipe, even though they evolved later."
+                },
+                {
+                    "chapter": 5,
+                    "title": "One Coastal Food World",
+                    "difficulty": "medium",
+                    "question": "Why is Sri Lanka considered part of the same “food world” as Kerala historically?",
+                    "options": [
+                        "Both regions depended mainly on wheat farming",
+                        "Both avoided maritime trade",
+                        "The Indian Ocean connected them through trade, migration, religion, and coastal food culture",
+                        "Both cuisines were created during colonial times"
+                    ],
+                    "answer": "The Indian Ocean connected them through trade, migration, religion, and coastal food culture",
+                    "trivia": "Arab, Tamil, Malay, and European traders all influenced the food cultures of both Kerala and Sri Lanka."
+                },
+                {
+                    "chapter": 6,
+                    "title": "What Is a Hopper?",
+                    "difficulty": "easy",
+                    "question": "What is appam called in Sri Lanka?",
+                    "options": [
+                        "Dosa",
+                        "String roti",
+                        "Pittu",
+                        "Appa (called “hoppers” in English)"
+                    ],
+                    "answer": "Appa (called “hoppers” in English)",
+                    "trivia": "The English word hopper likely evolved from colonial pronunciation of appa or appam."
+                },
+                {
+                    "chapter": 7,
+                    "title": "The Signature Shape",
+                    "difficulty": "easy",
+                    "question": "How are traditional Sri Lankan hoppers usually made?",
+                    "options": [
+                        "By steaming wheat flour in banana leaves",
+                        "By deep-frying rice dough",
+                        "By fermenting rice batter with coconut milk and cooking it in a curved pan",
+                        "By roasting rice paste over charcoal"
+                    ],
+                    "answer": "By fermenting rice batter with coconut milk and cooking it in a curved pan",
+                    "trivia": "The curved pan creates the signature crispy edges and soft center that define a good hopper."
+                },
+                {
+                    "chapter": 8,
+                    "title": "Trade Across the Ocean",
+                    "difficulty": "medium",
+                    "question": "What helped hopper culture spread widely across Sri Lanka historically?",
+                    "options": [
+                        "Silk Road camel trade",
+                        "Viking merchants",
+                        "Industrial factories",
+                        "Indian Ocean trade and centuries of contact with South India"
+                    ],
+                    "answer": "Indian Ocean trade and centuries of contact with South India",
+                    "trivia": "Sri Lanka sat directly on ancient maritime trade routes connecting India, Arabia, and Southeast Asia."
+                },
+                {
+                    "chapter": 9,
+                    "title": "Night Market Favorite",
+                    "difficulty": "easy",
+                    "question": "Which Sri Lankan hopper variation became especially famous as street food?",
+                    "options": [
+                        "Wheat hopper",
+                        "Sugar hopper",
+                        "Egg hopper",
+                        "Lentil hopper"
+                    ],
+                    "answer": "Egg hopper",
+                    "trivia": "Egg hoppers are often cooked fresh in front of customers at roadside stalls and night markets."
+                },
+                {
+                    "chapter": 10,
+                    "title": "Food as Historical Evidence",
+                    "difficulty": "hard",
+                    "question": "Why do food historians study dishes like appam and hoppers when researching trade history?",
+                    "options": [
+                        "They reveal military strategies",
+                        "They show how quickly food spoils",
+                        "Food names, ingredients, and techniques preserve evidence of migration and cultural exchange",
+                        "Ancient trade records rarely mention spices"
+                    ],
+                    "answer": "Food names, ingredients, and techniques preserve evidence of migration and cultural exchange",
+                    "trivia": "Historians often trace trade routes using surviving food names, cooking techniques, and fermentation traditions."
+                }
+            ]
         }
     ]
 }

@@ -58,11 +58,24 @@
 
         <!-- Home Screen -->
         <div id="home-screen" class="screen active">
-            
-            <div class="home-title-container text-center" style="margin-top: 20px; pointer-events: auto;">
+            <div class="home-title-container text-center" style="margin-top: 40px; pointer-events: auto;">
                 <h1 class="main-title">Edible Atlas</h1>
                 <p class="main-subtitle">... Through spice, trade and time</p>
-                <p id="click-marker-text" style="margin-top: 12px; font-weight: bold; color: #1a0e07; text-shadow: none;">Every dish has a journey. Begin yours with just a click!</p>
+                <div style="margin-top: 40px;">
+                    <button id="begin-journey-trigger" class="cinematic-btn">Begin Journey</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cinematic Intro Modal -->
+        <div id="intro-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content journal-card">
+                <div class="modal-body text-center">
+                    <p class="cinematic-text">“Follow the story of Appam across South India, Sri Lanka, and ancient maritime trade routes.”</p>
+                    <div style="margin-top: 30px;">
+                        <button id="start-journey-btn" class="primary-btn">Start Journey</button>
+                    </div>
+                </div>
             </div>
         </div>
 

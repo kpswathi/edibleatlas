@@ -178,6 +178,28 @@ function init() {
     document.getElementById('quit-journey-btn')?.addEventListener('click', returnHome);
     document.getElementById('quit-reveal-btn')?.addEventListener('click', returnHome);
     document.getElementById('back-home-btn')?.addEventListener('click', returnHome);
+
+    // Cinematic Journey Flow
+    const beginTrigger = document.getElementById('begin-journey-trigger');
+    const introModal = document.getElementById('intro-modal');
+    const startJourneyBtn = document.getElementById('start-journey-btn');
+
+    beginTrigger?.addEventListener('click', () => {
+        introModal.style.display = 'flex';
+    });
+
+    startJourneyBtn?.addEventListener('click', () => {
+        introModal.style.display = 'none';
+        // Automate zooming to India and starting Appam trail
+        selectedCountry = "India";
+        selectedDishName = "Appam";
+        zoomToCountry(null, "India");
+        
+        // Overwrite the default openSetup to start the journey immediately for Appam
+        setTimeout(() => {
+            startDishJourney(10); // Start with a good 10-stop journey
+        }, 1200);
+    });
     
     document.getElementById('reveal-next-btn')?.addEventListener('click', () => {
         currentQuestionIndex++;

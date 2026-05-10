@@ -303,7 +303,6 @@ function startDishJourney(length) {
     }));
     
     document.getElementById('journey-dish').textContent = `${targetDish.emoji} ${targetDish.name} Trail`;
-    updateStatsUI();
     renderQuestion();
     showScreen('game');
 }
@@ -312,8 +311,6 @@ function startTradeRoute(length) {
     playTravelSound();
     correctCount = 0;
     currentQuestionIndex = 0;
-    lives = 3;
-    streak = 0;
     
     let allDishes = [];
     Object.keys(DB).forEach(countryName => {
@@ -355,7 +352,6 @@ function startTradeRoute(length) {
     document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(43, 16, 85, 0.8), rgba(117, 151, 222, 0.6), rgba(242, 199, 146, 0.8)), url('${DB[startCountry].bg}')`;
     
     document.getElementById('journey-dish').textContent = `🌍 Trade Route`;
-    updateStatsUI();
     
     setTimeout(() => {
         renderQuestion();

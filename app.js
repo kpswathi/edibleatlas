@@ -81,6 +81,9 @@ const screens = {
 async function loadContent() {
     try {
         const response = await fetch('content.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} (File not found yet, wait for GitHub to finish building)`);
+        }
         const data = await response.json();
         
         // Parse into DB structure
@@ -117,8 +120,13 @@ async function loadContent() {
         init();
     } catch (err) {
         console.error("Failed to load content.json", err);
-        document.querySelector('.main-subtitle').textContent = "Error: Please run using a local web server to load content.json!";
-        document.querySelector('.main-subtitle').style.color = "red";
+        const subtitle = document.querySelector('.main-subtitle');
+        if (window.location.protocol === 'file:') {
+            subtitle.textContent = "Error: Browsers block local JSON files. Use VS Code Live Server!";
+        } else {
+            subtitle.textContent = "Error loading content (GitHub might still be building). Please refresh!";
+        }
+        subtitle.style.color = "red";
     }
 }
 

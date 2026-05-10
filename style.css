@@ -193,16 +193,17 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 }
 
 .icon-btn {
-    background: rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     transition: var(--transition);
+    font-family: 'Satisfy', cursive;
 }
 .icon-btn:hover { background: rgba(0,0,0,0.7); border-color: var(--secondary-color); }
 
@@ -371,6 +372,15 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
 /* Animations */
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+@media (max-width: 400px) {
+    .main-title { font-size: 3rem; }
+    .main-subtitle { font-size: 1.5rem; }
+    .card { padding: 12px; }
+    #question-text { font-size: 1.1rem; }
+    .option-btn { font-size: 0.95rem; padding: 10px; }
+    .reveal-emoji { font-size: 5rem; }
+}
 
 /* Passport Book Screen */
 .passport-book {

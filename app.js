@@ -229,9 +229,7 @@ function resetMap() {
     mapContainer.style.opacity = '1';
     mapContainer.style.filter = 'none';
     document.body.style.backgroundImage = "none";
-    explorationMode = null;
-    document.getElementById('mode-instruction').style.display = 'none';
-    document.getElementById('route-svg').style.opacity = '0';
+    explorationMode = 'dish';
     showScreen('home');
 }
 
@@ -385,6 +383,10 @@ function renderQuestion() {
     qEl.offsetHeight; 
     qEl.style.animation = 'popIn 0.4s ease-out';
     
+    const card = document.querySelector('.question-card');
+    const existingContinueBtn = card.querySelector('.continue-btn');
+    if (existingContinueBtn) existingContinueBtn.remove();
+    
     const container = document.getElementById('options-container');
     container.innerHTML = '';
     
@@ -418,13 +420,18 @@ function handleAnswer(selectedIdx, btn, correctIdx) {
     
     updateStatsUI();
     
-    setTimeout(() => {
+    const continueBtn = document.createElement('button');
+    continueBtn.className = 'primary-btn continue-btn';
+    continueBtn.style.marginTop = '16px';
+    continueBtn.textContent = 'Continue ➡️';
+    continueBtn.onclick = () => {
         if (lives <= 0) {
             showGameOver();
         } else {
             showRevealScreen(isCorrect);
         }
-    }, 1200);
+    };
+    btn.parentElement.parentElement.appendChild(continueBtn);
 }
 
 function updateStatsUI() {

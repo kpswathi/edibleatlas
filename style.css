@@ -83,9 +83,10 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 }
 
 #click-marker-text {
-    font-family: 'Merienda', cursive;
-    font-size: 1rem;
-    font-weight: bold !important;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    font-weight: 500 !important;
     background: rgba(255, 255, 255, 0.4);
     padding: 6px 16px;
     border-radius: 20px;

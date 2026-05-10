@@ -185,7 +185,37 @@ function init() {
             renderQuestion();
             showScreen('game');
         } else {
-            finishJourney();
+            // Reached the end of the selected stops
+            if (confirm("You've completed your selected stops! Do you want to continue playing this route?")) {
+                const countryData = DB[selectedCountry];
+                const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
+                if (journeyQueue.length < targetDish.chapters.length) {
+                    // Add more chapters
+                    let remaining = targetDish.chapters.filter(ch => !journeyQueue.find(q => q.q === ch.question));
+                    shuffleArray(remaining);
+                    const addCount = Math.min(5, remaining.length);
+                    const newQuestions = remaining.slice(0, addCount).map(ch => ({
+                        dishName: targetDish.name,
+                        dishEmoji: targetDish.emoji,
+                        countryEmoji: countryData.emoji,
+                        countryName: selectedCountry,
+                        phase: ch.phase,
+                        text: `Let's explore the history of ${targetDish.name}. Answer the question below to unlock a culinary fact!`,
+                        q: ch.question,
+                        options: ch.options,
+                        a: ch.options.indexOf(ch.answer) !== -1 ? ch.options.indexOf(ch.answer) : 0,
+                        postAnswerTrivia: ch.trivia
+                    }));
+                    journeyQueue = journeyQueue.concat(newQuestions);
+                    renderQuestion();
+                    showScreen('game');
+                } else {
+                    alert("You've played all available questions for this dish!");
+                    finishJourney();
+                }
+            } else {
+                finishJourney();
+            }
         }
     });
 
@@ -409,62 +439,30 @@ function handleAnswer(selectedIdx, btn, correctIdx) {
         allBtns[correctIdx].classList.add('correct');
     }
     
-    // Auto-advance after 1.5 seconds
+    // Show trivia popup after a short delay
     setTimeout(() => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < journeyQueue.length) {
-            renderQuestion();
-        } else {
-            // Reached the end of the selected stops
-            // Ask user if they want to continue or quit
-            if (confirm("You've completed your selected stops! Do you want to continue playing this route?")) {
-                const countryData = DB[selectedCountry];
-                const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
-                if (journeyQueue.length < targetDish.chapters.length) {
-                    // Add more chapters
-                    let remaining = targetDish.chapters.filter(ch => !journeyQueue.find(q => q.q === ch.question));
-                    shuffleArray(remaining);
-                    const addCount = Math.min(5, remaining.length);
-                    const newQuestions = remaining.slice(0, addCount).map(ch => ({
-                        dishName: targetDish.name,
-                        dishEmoji: targetDish.emoji,
-                        countryEmoji: countryData.emoji,
-                        countryName: selectedCountry,
-                        phase: ch.phase,
-                        text: `Let's explore the history of ${targetDish.name}. Answer the question below to unlock a culinary fact!`,
-                        q: ch.question,
-                        options: ch.options,
-                        a: ch.options.indexOf(ch.answer) !== -1 ? ch.options.indexOf(ch.answer) : 0,
-                        postAnswerTrivia: ch.trivia
-                    }));
-                    journeyQueue = journeyQueue.concat(newQuestions);
-                    renderQuestion();
-                } else {
-                    alert("You've played all available questions for this dish!");
-                    finishJourney();
-                }
-            } else {
-                finishJourney();
-            }
-        }
-    }, 1500);
+        showRevealScreen(isCorrect);
+    }, 1000);
 }
 
 function showRevealScreen(isCorrect) {
     const current = journeyQueue[currentQuestionIndex];
     const titleEl = document.getElementById('reveal-title');
+    const factEl = document.getElementById('reveal-fact');
+    const emojiEl = document.getElementById('reveal-emoji');
+    const countryEl = document.getElementById('reveal-country');
     
     if (isCorrect) {
         titleEl.textContent = "Correct! 🎉";
         titleEl.className = "reveal-correct";
     } else {
-        titleEl.textContent = "Oops! 💔";
+        titleEl.textContent = "Not quite! 💡";
         titleEl.className = "reveal-wrong";
     }
     
-    document.getElementById('reveal-fact').textContent = current.postAnswerTrivia || (currentQuestionIndex === journeyQueue.length - 1 ? "You have reached the end of the route!" : "Ready for the next stop?");
-    document.getElementById('reveal-emoji').textContent = current.dishEmoji;
-    document.getElementById('reveal-country').textContent = current.countryEmoji;
+    factEl.textContent = current.postAnswerTrivia || "That's a fascinating culinary fact!";
+    emojiEl.textContent = current.dishEmoji;
+    countryEl.textContent = current.countryEmoji;
     
     showScreen('reveal');
 }

@@ -35,7 +35,7 @@ function playTravelSound() {
         gainNode.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + 0.5);
-    } catch(e) { console.warn("Audio not supported"); }
+    } catch (e) { console.warn("Audio not supported"); }
 }
 
 function playStampSound() {
@@ -53,7 +53,7 @@ function playStampSound() {
         gainNode.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + 0.1);
-    } catch(e) { console.warn("Audio not supported"); }
+    } catch (e) { console.warn("Audio not supported"); }
 }
 
 // State
@@ -85,7 +85,7 @@ async function loadContent() {
             throw new Error(`HTTP error! status: ${response.status} (File not found yet, wait for GitHub to finish building)`);
         }
         const data = await response.json();
-        
+
         // Parse into DB structure
         data.dishExploration.forEach(item => {
             if (!DB[item.country]) {
@@ -96,7 +96,7 @@ async function loadContent() {
                     dishes: []
                 };
             }
-            
+
             const chapters = item.chapters.map(ch => {
                 const aIndex = ch.options.indexOf(ch.answer);
                 return {
@@ -108,7 +108,7 @@ async function loadContent() {
                     postAnswerTrivia: ch.trivia
                 };
             });
-            
+
             DB[item.country].dishes.push({
                 name: item.dish,
                 emoji: countryInfo[item.country]?.defaultDishEmoji || "🍲",
@@ -116,7 +116,7 @@ async function loadContent() {
                 chapters: chapters
             });
         });
-        
+
         init();
     } catch (err) {
         console.error("Failed to load content.json", err);
@@ -133,7 +133,7 @@ async function loadContent() {
 // Init
 function init() {
     renderPassportStamps();
-    
+
     const savedSound = localStorage.getItem('soundEnabled');
     if (savedSound !== null) {
         soundEnabled = savedSound === 'true';
@@ -144,12 +144,12 @@ function init() {
         soundEnabled = !soundEnabled;
         e.currentTarget.textContent = soundEnabled ? '🔊' : '🔇';
         localStorage.setItem('soundEnabled', soundEnabled);
-        if (soundEnabled) initAudio(); 
+        if (soundEnabled) initAudio();
     });
-    
+
     // Set default exploration mode to dish so markers are instantly clickable
     explorationMode = 'dish';
-    
+
     document.querySelectorAll('.map-marker').forEach(marker => {
         marker.addEventListener('click', (e) => {
             const country = e.currentTarget.dataset.country;
@@ -165,14 +165,14 @@ function init() {
         document.getElementById('map-container').style.filter = 'brightness(0.3) blur(5px)';
         showScreen('passport');
     });
-    
+
     document.getElementById('close-passport-btn')?.addEventListener('click', () => {
         document.getElementById('map-container').style.filter = 'none';
         showScreen('home');
     });
-    
+
     const returnHome = () => resetMap();
-    
+
     document.getElementById('cancel-setup-btn')?.addEventListener('click', returnHome);
     document.getElementById('cancel-route-btn')?.addEventListener('click', returnHome);
     document.getElementById('quit-journey-btn')?.addEventListener('click', returnHome);
@@ -192,8 +192,8 @@ function init() {
         introModal.style.display = 'none';
         
         // Ensure data is loaded
-        if (!DB["India"]) {
-            console.error("India data not found in DB");
+        if (!DB["India"] || DB["India"].dishes.length === 0) {
+            alert("The atlas is still gathering its stories. Please wait a moment and try again!");
             return;
         }
 
@@ -201,22 +201,43 @@ function init() {
         selectedCountry = "India";
         selectedDishName = "Appam";
         
-        // Show cinematic zoom/transition
+        // Zoom transition
         zoomToCountry(null, "India");
         
-        // Use a longer timeout to ensure zoom/openSetup finish
+        // Explicitly start the journey after the zoom finishes
         setTimeout(() => {
-            const countryData = DB[selectedCountry];
-            const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
+            const countryData = DB["India"];
+            const targetDish = countryData.dishes.find(d => d.name === "Appam");
             
             if (targetDish) {
-                startDishJourney(10);
-            } else {
-                console.error("Appam dish not found in India");
+                // Manually trigger the journey setup
+                correctCount = 0;
+                currentQuestionIndex = 0;
+                
+                let availableChapters = [...targetDish.chapters];
+                shuffleArray(availableChapters);
+                availableChapters = availableChapters.slice(0, 10);
+                
+                journeyQueue = availableChapters.map(ch => ({
+                    dishName: targetDish.name,
+                    dishEmoji: targetDish.emoji,
+                    countryEmoji: countryData.emoji,
+                    countryName: "India",
+                    phase: ch.phase,
+                    text: ch.text,
+                    q: ch.q,
+                    options: ch.options,
+                    a: ch.a,
+                    postAnswerTrivia: ch.postAnswerTrivia
+                }));
+                
+                document.getElementById('journey-dish').textContent = `${targetDish.emoji} ${targetDish.name} Trail`;
+                renderQuestion();
+                showScreen('game');
             }
-        }, 1500);
+        }, 1600);
     });
-    
+
     document.getElementById('reveal-next-btn')?.addEventListener('click', () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < journeyQueue.length) {
@@ -263,7 +284,7 @@ function init() {
             startDishJourney(length);
         });
     });
-    
+
     document.querySelectorAll('.route-length-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const length = parseInt(e.currentTarget.dataset.length);
@@ -279,11 +300,11 @@ function showScreen(screenId) {
 
 function zoomToCountry(element, country) {
     playTravelSound();
-    
+
     const mapContainer = document.getElementById('map-container');
     mapContainer.style.transform = 'scale(2.5)';
     mapContainer.style.opacity = '0';
-    
+
     document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(43, 16, 85, 0.8), rgba(117, 151, 222, 0.6), rgba(242, 199, 146, 0.8)), url('${DB[country].bg}')`;
 
     setTimeout(() => {
@@ -304,12 +325,12 @@ function resetMap() {
 function openSetup(country) {
     selectedCountry = country;
     document.getElementById('setup-country-badge').textContent = `${DB[country].emoji} ${country}`;
-    
+
     const dishGrid = document.getElementById('dish-grid');
     dishGrid.innerHTML = '';
-    
+
     document.getElementById('length-selection').style.display = 'none';
-    
+
     DB[country].dishes.forEach(dish => {
         const div = document.createElement('div');
         div.className = 'dish-card';
@@ -324,7 +345,7 @@ function openSetup(country) {
         div.onclick = () => selectDish(dish.name);
         dishGrid.appendChild(div);
     });
-    
+
     showScreen('setup');
 }
 
@@ -332,7 +353,7 @@ function selectDish(dishName) {
     playStampSound();
     selectedDishName = dishName;
     document.getElementById('length-selection').style.display = 'block';
-    
+
     document.querySelectorAll('.dish-card').forEach(card => card.classList.remove('selected'));
     document.getElementById(`dish-${dishName.replace(/\s+/g, '')}`).classList.add('selected');
 }
@@ -348,15 +369,15 @@ function startDishJourney(length) {
     playTravelSound();
     correctCount = 0;
     currentQuestionIndex = 0;
-    
+
     const countryData = DB[selectedCountry];
     const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
-    
+
     // Prevent repeated questions by picking randomly from the available chapters up to 'length'
     let availableChapters = [...targetDish.chapters];
     shuffleArray(availableChapters);
     availableChapters = availableChapters.slice(0, length);
-    
+
     journeyQueue = availableChapters.map(ch => ({
         dishName: targetDish.name,
         dishEmoji: targetDish.emoji,
@@ -369,7 +390,7 @@ function startDishJourney(length) {
         a: ch.a,
         postAnswerTrivia: ch.postAnswerTrivia
     }));
-    
+
     document.getElementById('journey-dish').textContent = `${targetDish.emoji} ${targetDish.name} Trail`;
     renderQuestion();
     showScreen('game');
@@ -379,14 +400,14 @@ function startTradeRoute(length) {
     playTravelSound();
     correctCount = 0;
     currentQuestionIndex = 0;
-    
+
     let allDishes = [];
     Object.keys(DB).forEach(countryName => {
         DB[countryName].dishes.forEach(dish => {
             allDishes.push({ ...dish, countryName });
         });
     });
-    
+
     let mixedChapters = [];
     allDishes.forEach(dish => {
         dish.chapters.forEach(ch => {
@@ -404,23 +425,23 @@ function startTradeRoute(length) {
             });
         });
     });
-    
+
     shuffleArray(mixedChapters);
     journeyQueue = mixedChapters.slice(0, length);
-    
+
     if (journeyQueue.length === 0) {
         alert("No dishes available to start a route!");
         return;
     }
-    
+
     const startCountry = journeyQueue[0].countryName;
     const mapContainer = document.getElementById('map-container');
     mapContainer.style.transform = 'scale(2.5)';
     mapContainer.style.opacity = '0';
     document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(43, 16, 85, 0.8), rgba(117, 151, 222, 0.6), rgba(242, 199, 146, 0.8)), url('${DB[startCountry].bg}')`;
-    
+
     document.getElementById('journey-dish').textContent = `🌍 Trade Route`;
-    
+
     setTimeout(() => {
         renderQuestion();
         showScreen('game');
@@ -429,34 +450,34 @@ function startTradeRoute(length) {
 
 function renderQuestion() {
     const current = journeyQueue[currentQuestionIndex];
-    
+
     if (currentQuestionIndex > 0 && journeyQueue[currentQuestionIndex - 1].countryName !== current.countryName) {
         playTravelSound();
         document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(43, 16, 85, 0.8), rgba(117, 151, 222, 0.6), rgba(242, 199, 146, 0.8)), url('${DB[current.countryName].bg}')`;
     }
-    
+
     document.getElementById('journey-progress').textContent = `Stop ${currentQuestionIndex + 1} / ${journeyQueue.length}`;
     document.getElementById('journey-phase').textContent = `Chapter: ${current.phase}`;
     document.getElementById('narrative-text').textContent = current.text;
-    
+
     const qEl = document.getElementById('question-text');
     qEl.textContent = current.q;
     qEl.style.animation = 'none';
-    qEl.offsetHeight; 
+    qEl.offsetHeight;
     qEl.style.animation = 'popIn 0.4s ease-out';
-    
+
     const card = document.querySelector('.question-card');
     const existingContinueBtn = card.querySelector('.continue-btn');
     if (existingContinueBtn) existingContinueBtn.remove();
-    
+
     const container = document.getElementById('options-container');
     container.innerHTML = '';
-    
+
     current.options.forEach((opt, idx) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerHTML = `<span style="font-weight:bold; color:var(--primary-color); margin-right:12px;">${String.fromCharCode(65 + idx)}</span> ${opt}`;
-        
+
         btn.onclick = () => handleAnswer(idx, btn, current.a);
         container.appendChild(btn);
     });
@@ -465,9 +486,9 @@ function renderQuestion() {
 function handleAnswer(selectedIdx, btn, correctIdx) {
     const allBtns = document.querySelectorAll('.option-btn');
     allBtns.forEach(b => b.disabled = true);
-    
+
     const isCorrect = selectedIdx === correctIdx;
-    
+
     if (isCorrect) {
         btn.classList.add('correct');
         correctCount++;
@@ -476,7 +497,7 @@ function handleAnswer(selectedIdx, btn, correctIdx) {
         btn.classList.add('wrong');
         allBtns[correctIdx].classList.add('correct');
     }
-    
+
     // Show trivia popup after a short delay
     setTimeout(() => {
         showRevealScreen(isCorrect);
@@ -489,7 +510,7 @@ function showRevealScreen(isCorrect) {
     const factEl = document.getElementById('reveal-fact');
     const emojiEl = document.getElementById('reveal-emoji');
     const countryEl = document.getElementById('reveal-country');
-    
+
     if (isCorrect) {
         titleEl.textContent = "Correct! 🎉";
         titleEl.className = "reveal-correct";
@@ -497,17 +518,17 @@ function showRevealScreen(isCorrect) {
         titleEl.textContent = "Not quite! 💡";
         titleEl.className = "reveal-wrong";
     }
-    
+
     factEl.textContent = current.postAnswerTrivia || "That's a fascinating culinary fact!";
     emojiEl.textContent = current.dishEmoji;
     countryEl.textContent = current.countryEmoji;
-    
+
     showScreen('reveal');
 }
 
 function finishJourney() {
     playStampSound();
-    
+
     if (explorationMode === 'dish') {
         let stamps = JSON.parse(localStorage.getItem('passportStamps')) || [];
         if (!stamps.includes(selectedCountry)) {
@@ -523,12 +544,12 @@ function finishJourney() {
         }
         document.getElementById('earned-stamp').textContent = "🌍";
     }
-    
+
     document.getElementById('complete-title').textContent = "Route Complete!";
     document.getElementById('stamp-reveal-box').style.display = 'inline-block';
     document.getElementById('stamp-text').textContent = "Passport stamp collected!";
     document.getElementById('final-score').textContent = `${correctCount} / ${journeyQueue.length}`;
-    
+
     renderPassportStamps();
     showScreen('complete');
 }
@@ -536,9 +557,9 @@ function finishJourney() {
 function renderPassportStamps() {
     const stamps = JSON.parse(localStorage.getItem('passportStamps')) || [];
     const container = document.getElementById('stamps-container');
-    if(!container) return;
+    if (!container) return;
     container.innerHTML = '';
-    
+
     Object.keys(DB).forEach(country => {
         const slot = document.createElement('div');
         slot.className = 'stamp-slot';
@@ -551,7 +572,7 @@ function renderPassportStamps() {
         }
         container.appendChild(slot);
     });
-    
+
     const tradeSlot = document.createElement('div');
     tradeSlot.className = 'stamp-slot';
     if (stamps.includes("TradeRoute")) {

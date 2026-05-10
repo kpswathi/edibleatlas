@@ -7,7 +7,7 @@
     <meta name="description" content="Embark on an interactive story-driven culinary journey!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&family=Satisfy&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Dancing+Script:wght@600;700&family=Italianno&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -68,7 +68,7 @@
             <div class="home-title-container text-center" style="margin-top: 20px; pointer-events: auto;">
                 <h1 class="main-title">Edible Atlas</h1>
                 <p class="main-subtitle">... Through spice, trade and time</p>
-                <p style="margin-top: 12px; font-weight: bold; color: #3b2011; font-size: 1.2rem; background: rgba(255,255,255,0.7); display: inline-block; padding: 4px 12px; border-radius: 12px; text-shadow: none;">Click any food marker to begin!</p>
+                <p id="click-marker-text" style="margin-top: 12px; font-weight: bold; color: #3b2011; background: rgba(255,255,255,0.7); display: inline-block; padding: 4px 12px; border-radius: 12px; text-shadow: none;">Click any food marker to begin!</p>
             </div>
         </div>
 
@@ -126,7 +126,6 @@
                 <button id="quit-journey-btn" class="icon-btn">🔙 Quit Route</button>
                 <div class="journey-header-info">
                     <span id="journey-dish" class="dish-label">🍕 Pizza</span>
-                    <span id="game-stats" class="dish-label" style="margin-left: 8px;">❤️ 3 | 🔥 0</span>
                 </div>
             </div>
 

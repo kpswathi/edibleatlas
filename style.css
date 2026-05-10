@@ -144,17 +144,18 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 
 .screen.active {
     opacity: 1;
-    pointer-events: none;
+    pointer-events: auto;
     transform: translateY(0) scale(1);
     z-index: 10;
 }
 
-/* Re-enable clicks for visible UI elements ONLY on the active screen */
-.screen.active .header-nav,
-.screen.active .journal-card,
-.screen.active .card,
-.screen.active .reveal-card,
-.screen.active .passport-book {
+/* Let home screen pass clicks to map, but keep its own UI clickable */
+#home-screen.active {
+    pointer-events: none;
+}
+#home-screen.active .header-nav,
+#home-screen.active .home-title-container,
+#home-screen.active .journal-card {
     pointer-events: auto;
 }
 

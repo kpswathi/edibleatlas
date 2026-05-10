@@ -280,8 +280,6 @@ function startDishJourney(length) {
     playTravelSound();
     correctCount = 0;
     currentQuestionIndex = 0;
-    lives = 3;
-    streak = 0;
     
     const countryData = DB[selectedCountry];
     const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
@@ -409,42 +407,51 @@ function handleAnswer(selectedIdx, btn, correctIdx) {
     if (isCorrect) {
         btn.classList.add('correct');
         correctCount++;
-        streak++;
         playStampSound();
     } else {
         btn.classList.add('wrong');
         allBtns[correctIdx].classList.add('correct');
-        lives--;
-        streak = 0;
     }
     
-    updateStatsUI();
-    
-    const continueBtn = document.createElement('button');
-    continueBtn.className = 'primary-btn continue-btn';
-    continueBtn.style.marginTop = '16px';
-    continueBtn.textContent = 'Continue ➡️';
-    continueBtn.onclick = () => {
-        if (lives <= 0) {
-            showGameOver();
+    // Auto-advance after 1.5 seconds
+    setTimeout(() => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < journeyQueue.length) {
+            renderQuestion();
         } else {
-            showRevealScreen(isCorrect);
+            // Reached the end of the selected stops
+            // Ask user if they want to continue or quit
+            if (confirm("You've completed your selected stops! Do you want to continue playing this route?")) {
+                const countryData = DB[selectedCountry];
+                const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
+                if (journeyQueue.length < targetDish.chapters.length) {
+                    // Add more chapters
+                    let remaining = targetDish.chapters.filter(ch => !journeyQueue.find(q => q.q === ch.question));
+                    shuffleArray(remaining);
+                    const addCount = Math.min(5, remaining.length);
+                    const newQuestions = remaining.slice(0, addCount).map(ch => ({
+                        dishName: targetDish.name,
+                        dishEmoji: targetDish.emoji,
+                        countryEmoji: countryData.emoji,
+                        countryName: selectedCountry,
+                        phase: ch.phase,
+                        text: `Let's explore the history of ${targetDish.name}. Answer the question below to unlock a culinary fact!`,
+                        q: ch.question,
+                        options: ch.options,
+                        a: ch.options.indexOf(ch.answer) !== -1 ? ch.options.indexOf(ch.answer) : 0,
+                        postAnswerTrivia: ch.trivia
+                    }));
+                    journeyQueue = journeyQueue.concat(newQuestions);
+                    renderQuestion();
+                } else {
+                    alert("You've played all available questions for this dish!");
+                    finishJourney();
+                }
+            } else {
+                finishJourney();
+            }
         }
-    };
-    btn.parentElement.parentElement.appendChild(continueBtn);
-}
-
-function updateStatsUI() {
-    document.getElementById('game-stats').textContent = `❤️ ${lives} | 🔥 ${streak}`;
-}
-
-function showGameOver() {
-    playTravelSound();
-    document.getElementById('complete-title').textContent = "Route Failed...";
-    document.getElementById('stamp-reveal-box').style.display = 'none';
-    document.getElementById('stamp-text').textContent = "You ran out of lives!";
-    document.getElementById('final-score').textContent = `${correctCount} / ${journeyQueue.length}`;
-    showScreen('complete');
+    }, 1500);
 }
 
 function showRevealScreen(isCorrect) {

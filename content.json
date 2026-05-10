@@ -343,126 +343,128 @@
             ]
         },
         {
-            "country": "Indonesia",
-            "region": "Java and Maritime Southeast Asia",
-            "dish": "Kue Apem",
-            "route": "Indian Ocean Trade Network",
-            "description": "Discover how South Indian fermentation traditions evolved into Indonesia’s sweet ceremonial kue apem through maritime trade, monsoon navigation, and local ritual culture.",
-            "history": "Kue apem is a traditional Indonesian rice cake made from fermented batter, often flavored with coconut milk and palm sugar. Historians believe the dish shares deep historical connections with South Indian appam through centuries of Indian Ocean trade. Over time, Indonesian communities transformed apem into a sweeter ceremonial food closely associated with selamatan gatherings, village rituals, and harvest traditions.",
-            "chapters": [
+            "dishExploration": [
                 {
-                    "chapter": 1,
-                    "title": "What Is Kue Apem?",
-                    "difficulty": "easy",
-                    "question": "What does “kue apem” mean in Indonesia, and how is it traditionally eaten?",
-                    "options": [
-                        "A spicy rice curry eaten only during royal feasts",
-                        "A fermented seafood dish served with noodles",
-                        "A traditional rice cake/snack made from fermented batter, often eaten as a sweet snack, market food, or ceremonial treat",
-                        "A wheat bread stuffed with meat and vegetables"
-                    ],
-                    "answer": "A traditional rice cake/snack made from fermented batter, often eaten as a sweet snack, market food, or ceremonial treat",
-                    "trivia": "The word kue means “cake” or “snack” in Indonesian, while apem is believed to share roots with South Indian appam."
-                },
-                {
-                    "chapter": 2,
-                    "title": "Trade Across the Ocean",
-                    "difficulty": "medium",
-                    "question": "Why do historians see Indonesian kue apem as evidence of Indian Ocean trade?",
-                    "options": [
-                        "It was introduced by Viking merchants",
-                        "It originally used potatoes from Europe",
-                        "It was created during Dutch colonial rule",
-                        "Both the cooking method and the word “apem” closely resemble South Indian appam traditions"
-                    ],
-                    "answer": "Both the cooking method and the word “apem” closely resemble South Indian appam traditions",
-                    "trivia": "Food historians often trace ancient trade connections through shared food names and fermentation techniques."
-                },
-                {
-                    "chapter": 3,
-                    "title": "The Sweet Transformation",
-                    "difficulty": "medium",
-                    "question": "What transformed Indonesian apem into a sweeter dish than Kerala appam?",
-                    "options": [
-                        "Persian saffron trade",
-                        "European chocolate imports",
-                        "Chinese soy sauce traditions",
-                        "Local palm sugar traditions in Java and Indonesia"
-                    ],
-                    "answer": "Local palm sugar traditions in Java and Indonesia",
-                    "trivia": "Indonesian palm sugar gave apem a caramel-like sweetness very different from the mild flavor of Kerala appam."
-                },
-                {
-                    "chapter": 4,
-                    "title": "The Monsoon Highways",
-                    "difficulty": "medium",
-                    "question": "What role did monsoon winds play in the spread of foods like appam and apem?",
-                    "options": [
-                        "They prevented sea travel for centuries",
-                        "They destroyed rice crops every year",
-                        "They allowed predictable seasonal trade between India and Southeast Asia",
-                        "They introduced wheat farming into Indonesia"
-                    ],
-                    "answer": "They allowed predictable seasonal trade between India and Southeast Asia",
-                    "trivia": "Ancient sailors timed voyages using monsoon wind patterns long before modern navigation technology existed."
-                },
-                {
-                    "chapter": 5,
-                    "title": "Fermentation Across Cultures",
-                    "difficulty": "easy",
-                    "question": "How is traditional Indonesian kue apem usually made?",
-                    "options": [
-                        "By boiling wheat dough in coconut water",
-                        "By roasting rice flour over charcoal without fermentation",
-                        "By fermenting rice flour batter, often with coconut milk and palm sugar, then steaming or cooking it into soft cakes",
-                        "By deep-frying lentil paste in oil"
-                    ],
-                    "answer": "By fermenting rice flour batter, often with coconut milk and palm sugar, then steaming or cooking it into soft cakes",
-                    "trivia": "Like South Indian appam, Indonesian kue apem relies on fermentation — a cooking technique that traveled widely through Indian Ocean trade networks."
-                },
-                {
-                    "chapter": 6,
-                    "title": "Ceremonial Foods",
-                    "difficulty": "medium",
-                    "question": "In Indonesia, kue apem is most commonly associated with what kind of traditional gathering?",
-                    "options": [
-                        "Military training camps",
-                        "European-style tea parties",
-                        "Communal blessing and prayer ceremonies called selamatan (slametan)",
-                        "Fishing competitions"
-                    ],
-                    "answer": "Communal blessing and prayer ceremonies called selamatan (slametan)",
-                    "trivia": "Selamatan rituals are meant to create harmony, protection, and togetherness within the community."
-                },
-                {
-                    "chapter": 7,
-                    "title": "Rice and Ritual",
-                    "difficulty": "medium",
-                    "question": "Why did kue apem become connected to harvest and village ceremonies in rural Indonesia?",
-                    "options": [
-                        "Rice had little importance in Indonesian society",
-                        "It was used mainly as animal feed",
-                        "Rice-based foods carried symbolic meaning tied to prosperity, gratitude, and agriculture",
-                        "Palm sugar was extremely rare"
-                    ],
-                    "answer": "Rice-based foods carried symbolic meaning tied to prosperity, gratitude, and agriculture",
-                    "trivia": "Rice has long been considered both a staple food and a sacred symbol in many Southeast Asian cultures."
-                },
-                {
-                    "chapter": 8,
-                    "title": "Trade and Tradition",
-                    "difficulty": "hard",
-                    "question": "What does the ceremonial use of kue apem reveal about food history in maritime Asia?",
-                    "options": [
-                        "Foods remained unchanged for thousands of years",
-                        "Indonesia avoided outside influence",
-                        "Only spices traveled through trade routes",
-                        "Trade foods often became absorbed into local religious and cultural traditions"
-                    ],
-                    "answer": "Trade foods often became absorbed into local religious and cultural traditions",
-                    "trivia": "Kue apem reflects a blend of South Asian fermentation traditions, Islamic influence, and Javanese ritual culture."
+                    "country": "Indonesia",
+                    "region": "Java and Maritime Southeast Asia",
+                    "dish": "Kue Apem",
+                    "route": "Indian Ocean Trade Network",
+                    "description": "Discover how South Indian fermentation traditions evolved into Indonesia’s sweet ceremonial kue apem through maritime trade, monsoon navigation, and local ritual culture.",
+                    "history": "Kue apem is a traditional Indonesian rice cake made from fermented batter, often flavored with coconut milk and palm sugar. Historians believe the dish shares deep historical connections with South Indian appam through centuries of Indian Ocean trade. Over time, Indonesian communities transformed apem into a sweeter ceremonial food closely associated with selamatan gatherings, village rituals, and harvest traditions.",
+                    "chapters": [
+                        {
+                            "chapter": 1,
+                            "title": "What Is Kue Apem?",
+                            "difficulty": "easy",
+                            "question": "What does “kue apem” mean in Indonesia, and how is it traditionally eaten?",
+                            "options": [
+                                "A spicy rice curry eaten only during royal feasts",
+                                "A fermented seafood dish served with noodles",
+                                "A traditional rice cake/snack made from fermented batter, often eaten as a sweet snack, market food, or ceremonial treat",
+                                "A wheat bread stuffed with meat and vegetables"
+                            ],
+                            "answer": "A traditional rice cake/snack made from fermented batter, often eaten as a sweet snack, market food, or ceremonial treat",
+                            "trivia": "The word kue means “cake” or “snack” in Indonesian, while apem is believed to share roots with South Indian appam."
+                        },
+                        {
+                            "chapter": 2,
+                            "title": "Trade Across the Ocean",
+                            "difficulty": "medium",
+                            "question": "Why do historians see Indonesian kue apem as evidence of Indian Ocean trade?",
+                            "options": [
+                                "It was introduced by Viking merchants",
+                                "It originally used potatoes from Europe",
+                                "It was created during Dutch colonial rule",
+                                "Both the cooking method and the word “apem” closely resemble South Indian appam traditions"
+                            ],
+                            "answer": "Both the cooking method and the word “apem” closely resemble South Indian appam traditions",
+                            "trivia": "Food historians often trace ancient trade connections through shared food names and fermentation techniques."
+                        },
+                        {
+                            "chapter": 3,
+                            "title": "The Sweet Transformation",
+                            "difficulty": "medium",
+                            "question": "What transformed Indonesian apem into a sweeter dish than Kerala appam?",
+                            "options": [
+                                "Persian saffron trade",
+                                "European chocolate imports",
+                                "Chinese soy sauce traditions",
+                                "Local palm sugar traditions in Java and Indonesia"
+                            ],
+                            "answer": "Local palm sugar traditions in Java and Indonesia",
+                            "trivia": "Indonesian palm sugar gave apem a caramel-like sweetness very different from the mild flavor of Kerala appam."
+                        },
+                        {
+                            "chapter": 4,
+                            "title": "The Monsoon Highways",
+                            "difficulty": "medium",
+                            "question": "What role did monsoon winds play in the spread of foods like appam and apem?",
+                            "options": [
+                                "They prevented sea travel for centuries",
+                                "They destroyed rice crops every year",
+                                "They allowed predictable seasonal trade between India and Southeast Asia",
+                                "They introduced wheat farming into Indonesia"
+                            ],
+                            "answer": "They allowed predictable seasonal trade between India and Southeast Asia",
+                            "trivia": "Ancient sailors timed voyages using monsoon wind patterns long before modern navigation technology existed."
+                        },
+                        {
+                            "chapter": 5,
+                            "title": "Fermentation Across Cultures",
+                            "difficulty": "easy",
+                            "question": "How is traditional Indonesian kue apem usually made?",
+                            "options": [
+                                "By boiling wheat dough in coconut water",
+                                "By roasting rice flour over charcoal without fermentation",
+                                "By fermenting rice flour batter, often with coconut milk and palm sugar, then steaming or cooking it into soft cakes",
+                                "By deep-frying lentil paste in oil"
+                            ],
+                            "answer": "By fermenting rice flour batter, often with coconut milk and palm sugar, then steaming or cooking it into soft cakes",
+                            "trivia": "Like South Indian appam, Indonesian kue apem relies on fermentation — a cooking technique that traveled widely through Indian Ocean trade networks."
+                        },
+                        {
+                            "chapter": 6,
+                            "title": "Ceremonial Foods",
+                            "difficulty": "medium",
+                            "question": "In Indonesia, kue apem is most commonly associated with what kind of traditional gathering?",
+                            "options": [
+                                "Military training camps",
+                                "European-style tea parties",
+                                "Communal blessing and prayer ceremonies called selamatan (slametan)",
+                                "Fishing competitions"
+                            ],
+                            "answer": "Communal blessing and prayer ceremonies called selamatan (slametan)",
+                            "trivia": "Selamatan rituals are meant to create harmony, protection, and togetherness within the community."
+                        },
+                        {
+                            "chapter": 7,
+                            "title": "Rice and Ritual",
+                            "difficulty": "medium",
+                            "question": "Why did kue apem become connected to harvest and village ceremonies in rural Indonesia?",
+                            "options": [
+                                "Rice had little importance in Indonesian society",
+                                "It was used mainly as animal feed",
+                                "Rice-based foods carried symbolic meaning tied to prosperity, gratitude, and agriculture",
+                                "Palm sugar was extremely rare"
+                            ],
+                            "answer": "Rice-based foods carried symbolic meaning tied to prosperity, gratitude, and agriculture",
+                            "trivia": "Rice has long been considered both a staple food and a sacred symbol in many Southeast Asian cultures."
+                        },
+                        {
+                            "chapter": 8,
+                            "title": "Trade and Tradition",
+                            "difficulty": "hard",
+                            "question": "What does the ceremonial use of kue apem reveal about food history in maritime Asia?",
+                            "options": [
+                                "Foods remained unchanged for thousands of years",
+                                "Indonesia avoided outside influence",
+                                "Only spices traveled through trade routes",
+                                "Trade foods often became absorbed into local religious and cultural traditions"
+                            ],
+                            "answer": "Trade foods often became absorbed into local religious and cultural traditions",
+                            "trivia": "Kue apem reflects a blend of South Asian fermentation traditions, Islamic influence, and Javanese ritual culture."
+                        }
+                    ]
                 }
             ]
         }
-    ]
-}

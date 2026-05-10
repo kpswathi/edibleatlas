@@ -5,7 +5,7 @@ const countryInfo = {
     "Sri Lanka": { emoji: "🇱🇰", bg: "assets/sri_lanka_nature.png", defaultDishEmoji: "🥞" },
     "Malaysia": { emoji: "🇲🇾", bg: "assets/japan_street_1778310737300.png", defaultDishEmoji: "🫓" },
     "Myanmar": { emoji: "🇲🇲", bg: "assets/india_market_1778310758930.png", defaultDishEmoji: "🥞" },
-    "Indonesia": { emoji: "🇮🇩", bg: "assets/mexico_plaza_1778310773365.png", defaultDishEmoji: "🥞" },
+    "Indonesia": { emoji: "🇮🇩", bg: "assets/indonesia_feast.png", defaultDishEmoji: "🥞" },
     "Singapore": { emoji: "🇸🇬", bg: "assets/japan_street_1778310737300.png", defaultDishEmoji: "🫓" }
 };
 

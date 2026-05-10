@@ -19,7 +19,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     background-color: var(--bg-color);
     color: var(--text-primary);
     min-height: 100vh;
@@ -32,7 +33,10 @@ body {
     transition: background-image 1.5s ease-in-out;
 }
 
-h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+h1, h2, h3 { 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
 
 /* Interactive Map Base */
 .map-wrapper {
@@ -199,7 +203,8 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
     background: rgba(255, 255, 255, 0.15);
     padding: 8px 16px;
     border-radius: 20px;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-weight: 700;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.3);
@@ -216,7 +221,8 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
     cursor: pointer;
     backdrop-filter: blur(4px);
     transition: var(--transition);
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
 .icon-btn:hover { background: rgba(0,0,0,0.7); border-color: var(--secondary-color); }
 
@@ -277,13 +283,25 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 .length-btn:hover, .route-length-btn:hover { border-color: #d35400; background: #fff5eb; }
 
 /* Buttons */
-button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; padding: 16px 24px; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: var(--transition); width: 100%; }
+button { 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    border: none; 
+    border-radius: 12px; 
+    padding: 16px 24px; 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: var(--transition); 
+    width: 100%; 
+}
 .primary-btn { 
     background: #d35400; 
     color: white; 
     box-shadow: 0 4px 0 #a04000; 
     border: none;
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-weight: bold;
 }
 .primary-btn:active { transform: translateY(6px); box-shadow: 0 0 0 transparent; }
@@ -298,7 +316,8 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
     color: #fdfaf6;
     padding: 8px 16px;
     border-radius: 8px;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-weight: 800;
     box-shadow: var(--shadow-sm);
 }
@@ -353,6 +372,7 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
     display: flex;
     align-items: center;
     font-family: 'Vollkorn', serif;
+    font-style: normal;
 }
 .option-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--secondary-color); }
 .option-btn:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); }

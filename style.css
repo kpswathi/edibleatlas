@@ -270,7 +270,7 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
 .secondary-btn:active { transform: translateY(6px); box-shadow: 0 0 0 transparent; }
 
 /* Game Screen */
-.journey-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.journey-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 
 .ticket-stub {
     background: var(--secondary-color);
@@ -301,24 +301,25 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
 }
 
 .narrative-box {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     font-size: 1.15rem;
-    line-height: 1.6;
+    line-height: 1.5;
     border-left: 4px solid var(--primary-color);
     border-radius: 4px 12px 12px 4px;
+    font-family: 'Vollkorn', serif;
 }
 
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border-radius: var(--border-radius);
-    padding: 24px;
+    padding: 16px;
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(244, 208, 111, 0.15);
 }
 
-#question-text { font-size: 1.25rem; line-height: 1.4; margin-bottom: 20px; color: #fff; }
-.options-grid { display: grid; gap: 10px; }
+#question-text { font-size: 1.25rem; line-height: 1.3; margin-bottom: 12px; color: #fff; font-family: 'Vollkorn', serif; }
+.options-grid { display: grid; gap: 8px; }
 
 .option-btn {
     background: rgba(255, 255, 255, 0.05);
@@ -326,10 +327,11 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
     border: 1px solid rgba(244, 208, 111, 0.2);
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
     font-size: 1.05rem;
-    padding: 14px;
+    padding: 10px 14px;
     text-align: left;
     display: flex;
     align-items: center;
+    font-family: 'Vollkorn', serif;
 }
 .option-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--secondary-color); }
 .option-btn:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); }
@@ -360,11 +362,11 @@ button { font-family: 'Outfit', sans-serif; border: none; border-radius: 12px; p
 }
 .reveal-emoji { font-size: 6.5rem; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)); animation: float 3s ease-in-out infinite; }
 .reveal-country { position: absolute; top: 16px; right: 16px; font-size: 3rem; z-index: 2; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6)); }
-.reveal-content { padding: 24px; text-align: center; }
-#reveal-title { font-size: 2rem; margin-bottom: 12px; }
+.reveal-content { padding: 32px; text-align: center; }
+#reveal-title { font-size: 2.5rem; margin-bottom: 12px; font-family: 'Vollkorn', serif; }
 #reveal-title.reveal-correct { color: var(--correct-color); }
 #reveal-title.reveal-wrong { color: var(--wrong-color); }
-#reveal-fact { font-size: 1.1rem; line-height: 1.5; margin-bottom: 24px; }
+#reveal-fact { font-size: 1.15rem; color: #fdfaf6; margin-bottom: 32px; line-height: 1.6; font-family: 'Vollkorn', serif; }
 
 /* Animations */
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }

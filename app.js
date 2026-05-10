@@ -101,7 +101,7 @@ async function loadContent() {
                 const aIndex = ch.options.indexOf(ch.answer);
                 return {
                     phase: ch.title,
-                    text: `Stop ${ch.chapter}: Let's explore the history of ${item.dish}. Answer the question below to unlock a culinary fact!`,
+                    text: `Let's explore the history of ${item.dish}. Answer the question below to unlock a culinary fact!`,
                     q: ch.question,
                     options: ch.options,
                     a: aIndex !== -1 ? aIndex : 0,

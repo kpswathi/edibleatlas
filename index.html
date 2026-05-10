@@ -7,7 +7,7 @@
     <meta name="description" content="Embark on an interactive story-driven culinary journey!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@400;600;800&family=Pacifico&family=Quicksand:wght@500;700&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,11 +57,13 @@
     </div>
 
     <div id="app">
+        <!-- GLOBAL UI -->
+        <div style="position: absolute; top: 16px; right: 16px; z-index: 999; pointer-events: auto;">
+            <button id="toggle-sound-btn" class="icon-btn" title="Toggle Sound" style="background: rgba(255,255,255,0.8); border: 2px solid #e5dcc3; border-radius: 50%; padding: 8px; font-size: 1.2rem;">🔊</button>
+        </div>
+
         <!-- Home Screen -->
         <div id="home-screen" class="screen active">
-            <div style="position: absolute; top: 24px; right: 24px; z-index: 20; pointer-events: auto;">
-                <button id="toggle-sound-btn" class="icon-btn" title="Toggle Sound">🔊</button>
-            </div>
             
             <div class="home-title-container text-center" style="margin-top: 20px; pointer-events: auto;">
                 <h1 class="main-title">Edible Atlas</h1>

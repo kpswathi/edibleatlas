@@ -191,7 +191,7 @@ function init() {
                 const targetDish = countryData.dishes.find(d => d.name === selectedDishName);
                 if (journeyQueue.length < targetDish.chapters.length) {
                     // Add more chapters
-                    let remaining = targetDish.chapters.filter(ch => !journeyQueue.find(q => q.q === ch.question));
+                    let remaining = targetDish.chapters.filter(ch => !journeyQueue.find(q => q.q === ch.q));
                     shuffleArray(remaining);
                     const addCount = Math.min(5, remaining.length);
                     const newQuestions = remaining.slice(0, addCount).map(ch => ({
@@ -200,11 +200,11 @@ function init() {
                         countryEmoji: countryData.emoji,
                         countryName: selectedCountry,
                         phase: ch.phase,
-                        text: `Let's explore the history of ${targetDish.name}. Answer the question below to unlock a culinary fact!`,
-                        q: ch.question,
+                        text: ch.text,
+                        q: ch.q,
                         options: ch.options,
-                        a: ch.options.indexOf(ch.answer) !== -1 ? ch.options.indexOf(ch.answer) : 0,
-                        postAnswerTrivia: ch.trivia
+                        a: ch.a,
+                        postAnswerTrivia: ch.postAnswerTrivia
                     }));
                     journeyQueue = journeyQueue.concat(newQuestions);
                     renderQuestion();
@@ -391,26 +391,35 @@ function startTradeRoute(length) {
 
 function renderQuestion() {
     const current = journeyQueue[currentQuestionIndex];
+    if (!current) return;
+
+    // Reset UI state
+    const gameScreen = screens.game;
+    gameScreen.scrollTop = 0;
 
     if (currentQuestionIndex > 0 && journeyQueue[currentQuestionIndex - 1].countryName !== current.countryName) {
         playTravelSound();
         document.body.style.backgroundImage = `linear-gradient(to bottom, rgba(43, 16, 85, 0.8), rgba(117, 151, 222, 0.6), rgba(242, 199, 146, 0.8)), url('${DB[current.countryName].bg}')`;
     }
 
+    // Update Text Elements
     document.getElementById('journey-progress').textContent = `Stop ${currentQuestionIndex + 1} / ${journeyQueue.length}`;
     document.getElementById('journey-phase').textContent = `Chapter: ${current.phase}`;
     document.getElementById('narrative-text').textContent = current.text;
 
     const qEl = document.getElementById('question-text');
     qEl.textContent = current.q;
+    
+    // Refresh Animations
     qEl.style.animation = 'none';
-    qEl.offsetHeight;
+    qEl.offsetHeight; // trigger reflow
     qEl.style.animation = 'popIn 0.4s ease-out';
 
     const card = document.querySelector('.question-card');
     const existingContinueBtn = card.querySelector('.continue-btn');
     if (existingContinueBtn) existingContinueBtn.remove();
 
+    // Render Options
     const container = document.getElementById('options-container');
     container.innerHTML = '';
 

@@ -150,6 +150,50 @@ function init() {
     // Set default exploration mode to dish so markers are instantly clickable
     explorationMode = 'dish';
 
+    let currentMapFilter = 'maritime';
+
+    function applyMapFilter() {
+        const routeSvg = document.getElementById('route-svg');
+        const markers = document.querySelectorAll('.map-marker');
+
+        if (currentMapFilter === 'maritime') {
+            if (routeSvg) routeSvg.style.opacity = 1;
+            markers.forEach(marker => {
+                marker.style.opacity = 1;
+                marker.style.pointerEvents = 'auto';
+            });
+        } else {
+            if (routeSvg) routeSvg.style.opacity = 0; // hide route when exploring by dish
+            
+            markers.forEach(marker => {
+                const country = marker.dataset.country;
+                let hasDish = false;
+                
+                if (DB[country]) {
+                    const dishNames = DB[country].dishes.map(d => d.dish.toLowerCase());
+                    if (currentMapFilter === 'appam') {
+                        hasDish = dishNames.some(d => d.includes('apam') || d.includes('appam') || d.includes('appa'));
+                    } else if (currentMapFilter === 'idiyappam') {
+                        hasDish = dishNames.some(d => d.includes('idiyappam') || d.includes('string hoppers') || d.includes('mohinga') || d.includes('khanom chin') || d.includes('phở'));
+                    }
+                }
+                
+                if (hasDish) {
+                    marker.style.opacity = 1;
+                    marker.style.pointerEvents = 'auto';
+                } else {
+                    marker.style.opacity = 0.3;
+                    marker.style.pointerEvents = 'none';
+                }
+            });
+        }
+    }
+
+    document.getElementById('exploration-mode-select')?.addEventListener('change', (e) => {
+        currentMapFilter = e.target.value;
+        applyMapFilter();
+    });
+
     document.querySelectorAll('.map-marker').forEach(marker => {
         marker.addEventListener('click', (e) => {
             const country = e.currentTarget.dataset.country;

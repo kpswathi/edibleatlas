@@ -189,9 +189,16 @@ function init() {
         }
     }
 
-    document.getElementById('exploration-mode-select')?.addEventListener('change', (e) => {
-        currentMapFilter = e.target.value;
-        applyMapFilter();
+    document.querySelectorAll('.explore-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Update active state visually
+            document.querySelectorAll('.explore-btn').forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            
+            // Apply filter
+            currentMapFilter = e.currentTarget.dataset.filter;
+            applyMapFilter();
+        });
     });
 
     document.querySelectorAll('.map-marker').forEach(marker => {

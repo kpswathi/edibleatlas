@@ -113,11 +113,12 @@ h1, h2, h3 {
     100% { transform: scale(2.5); opacity: 0; }
 }
 
-.route-path {
-    stroke-dasharray: 2 4;
-    animation: dash-move 20s linear infinite reverse;
+.maritime-path {
+    stroke-dasharray: 1 2;
+    stroke-linecap: round;
+    animation: maritime-dash 20s linear infinite reverse;
 }
-@keyframes dash-move {
+@keyframes maritime-dash {
     to { stroke-dashoffset: -100; }
 }
 

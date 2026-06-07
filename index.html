@@ -21,14 +21,16 @@
             <!-- SVG Map lines for routes -->
             <svg id="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; opacity: 0; transition: opacity 1s;">
-                <!-- India to Sri Lanka -->
-                <path d="M 68.5 46 Q 69 49 69 53" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
-                <!-- Sri Lanka to Malaysia -->
-                <path d="M 69 53 Q 72 53 74 55" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
-                <!-- Malaysia to Brunei -->
-                <path d="M 74 55 Q 76 55 79 55" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
-                <!-- Brunei to Indonesia -->
-                <path d="M 79 55 Q 78.5 58 78 61" stroke="#d35400" stroke-width="0.4" fill="none" class="route-path" />
+                <!-- Full Maritime Route -->
+                <path id="maritime-route" d="M 68.5 46 Q 69 49 69 53 Q 72 53 74 55 Q 76 55 79 55 Q 78.5 58 78 61" stroke="#00a8e8" stroke-width="0.5" fill="none" class="maritime-path" />
+                
+                <!-- Animated Ship -->
+                <text font-size="2.5" fill="#fff" dominant-baseline="central">
+                    <textPath href="#maritime-route" startOffset="0%">
+                        🚢
+                        <animate attributeName="startOffset" from="0%" to="100%" dur="15s" repeatCount="indefinite" />
+                    </textPath>
+                </text>
             </svg>
 
             <!-- Markers -->

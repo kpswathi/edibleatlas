@@ -689,6 +689,756 @@
                     "trivia": "Malaysia sits on the Strait of Malacca, one of the busiest trade corridors in world history."
                 }
             ]
+        },
+        {
+            "country": "India",
+            "region": "Kerala and Tamil Nadu",
+            "dish": "Idiyappam",
+            "route": "Bay of Bengal Trade Network",
+            "description": "Discover the history of South Indian rice noodles and their connection across maritime Asia.",
+            "history": "Idiyappam is one of the oldest surviving rice-noodle traditions in the Indian Ocean world, reflecting a deep-rooted history of rice cultivation and early processing technologies that would eventually spread across maritime trade routes.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "A String of History",
+                    "difficulty": "easy",
+                    "question": "What is the South Indian rice-noodle dish made by pressing rice dough into thin strands?",
+                    "options": [
+                        "Phở",
+                        "Laksa",
+                        "Idiyappam",
+                        "Mohinga"
+                    ],
+                    "answer": "Idiyappam",
+                    "trivia": "Idiyappam is sometimes called \"string hoppers\" in English, though that term is more commonly used in Sri Lanka."
+                },
+                {
+                    "chapter": 2,
+                    "title": "The Right Grain",
+                    "difficulty": "easy",
+                    "question": "Which grain is used to make Idiyappam?",
+                    "options": [
+                        "Wheat",
+                        "Rice",
+                        "Millet",
+                        "Barley"
+                    ],
+                    "answer": "Rice",
+                    "trivia": "Rice made Idiyappam especially suitable for tropical South India where rice was the staple crop."
+                },
+                {
+                    "chapter": 3,
+                    "title": "Cooking with Steam",
+                    "difficulty": "easy",
+                    "question": "How is Idiyappam traditionally cooked?",
+                    "options": [
+                        "Fried",
+                        "Roasted",
+                        "Steamed",
+                        "Baked"
+                    ],
+                    "answer": "Steamed",
+                    "trivia": "Steaming is a cooking method shared by many rice-noodle traditions across Asia."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Regional Roots",
+                    "difficulty": "medium",
+                    "question": "Which Indian regions are most strongly associated with Idiyappam?",
+                    "options": [
+                        "Punjab and Haryana",
+                        "Kerala and Tamil Nadu",
+                        "Gujarat and Rajasthan",
+                        "Kashmir and Ladakh"
+                    ],
+                    "answer": "Kerala and Tamil Nadu",
+                    "trivia": "Coastal trade networks helped spread food ideas from these regions across the Bay of Bengal."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Across the Water",
+                    "difficulty": "medium",
+                    "question": "Which neighboring country has a nearly identical dish called String Hoppers?",
+                    "options": [
+                        "Nepal",
+                        "Sri Lanka",
+                        "Bhutan",
+                        "Pakistan"
+                    ],
+                    "answer": "Sri Lanka",
+                    "trivia": "The close similarity reflects centuries of maritime contact."
+                },
+                {
+                    "chapter": 6,
+                    "title": "The Extrusion Press",
+                    "difficulty": "medium",
+                    "question": "What tool is traditionally used to make Idiyappam?",
+                    "options": [
+                        "Rolling pin",
+                        "Rice mill",
+                        "Extrusion press",
+                        "Tandoor"
+                    ],
+                    "answer": "Extrusion press",
+                    "trivia": "The same principle is used in many noodle-making traditions worldwide."
+                },
+                {
+                    "chapter": 7,
+                    "title": "Perfect Pairings",
+                    "difficulty": "medium",
+                    "question": "Idiyappam is usually served with:",
+                    "options": [
+                        "Soy sauce only",
+                        "Coconut-based curries",
+                        "Cheese sauce",
+                        "Olive oil"
+                    ],
+                    "answer": "Coconut-based curries",
+                    "trivia": "Coconut is a common ingredient across the Indian Ocean food world."
+                },
+                {
+                    "chapter": 8,
+                    "title": "The Maritime Connector",
+                    "difficulty": "hard",
+                    "question": "Which maritime region helped connect Idiyappam traditions to neighboring cultures?",
+                    "options": [
+                        "Baltic Sea",
+                        "Mediterranean Sea",
+                        "Bay of Bengal",
+                        "Arctic Ocean"
+                    ],
+                    "answer": "Bay of Bengal",
+                    "trivia": "Merchants regularly crossed between South India and Sri Lanka."
+                },
+                {
+                    "chapter": 9,
+                    "title": "Deep Roots",
+                    "difficulty": "hard",
+                    "question": "Why do food historians study Idiyappam?",
+                    "options": [
+                        "It uses potatoes",
+                        "It is one of Asia's oldest rice-noodle traditions",
+                        "It contains chocolate",
+                        "It originated in Europe"
+                    ],
+                    "answer": "It is one of Asia's oldest rice-noodle traditions",
+                    "trivia": "Its exact origins remain uncertain, but it has deep roots in South India."
+                },
+                {
+                    "chapter": 10,
+                    "title": "A Connected Story",
+                    "difficulty": "hard",
+                    "question": "What makes Idiyappam part of a connected food history?",
+                    "options": [
+                        "It is eaten only in one village",
+                        "Similar rice-noodle dishes exist across Asia",
+                        "It uses imported wheat",
+                        "It was invented recently"
+                    ],
+                    "answer": "Similar rice-noodle dishes exist across Asia",
+                    "trivia": "Rice noodles appear in many forms from India to Vietnam."
+                }
+            ]
+        },
+        {
+            "country": "Sri Lanka",
+            "region": "Sri Lanka",
+            "dish": "String Hoppers",
+            "route": "Palk Strait Trade Route",
+            "description": "Explore the Sri Lankan counterpart to South India's rice noodles and how they traveled across the Palk Strait.",
+            "history": "String Hoppers, closely related to South India's Idiyappam, demonstrate how neighboring regions heavily influence each other's cuisines through centuries of trade and migration.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "The Noodle Nests",
+                    "difficulty": "easy",
+                    "question": "What are Sri Lanka's rice-noodle nests called?",
+                    "options": [
+                        "Laksa",
+                        "Mee Hoon",
+                        "String Hoppers",
+                        "Bún"
+                    ],
+                    "answer": "String Hoppers",
+                    "trivia": "They are one of the country's most iconic breakfast foods."
+                },
+                {
+                    "chapter": 2,
+                    "title": "A Delicate Texture",
+                    "difficulty": "easy",
+                    "question": "String Hoppers are primarily made from:",
+                    "options": [
+                        "Wheat flour",
+                        "Rice flour",
+                        "Corn flour",
+                        "Chickpea flour"
+                    ],
+                    "answer": "Rice flour",
+                    "trivia": "Rice flour helps create their delicate texture."
+                },
+                {
+                    "chapter": 3,
+                    "title": "Preserving Moisture",
+                    "difficulty": "easy",
+                    "question": "What cooking method is used for String Hoppers?",
+                    "options": [
+                        "Frying",
+                        "Grilling",
+                        "Steaming",
+                        "Smoking"
+                    ],
+                    "answer": "Steaming",
+                    "trivia": "Steaming preserves moisture and keeps the strands soft."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Close Relations",
+                    "difficulty": "medium",
+                    "question": "Which country's Idiyappam is most closely related to String Hoppers?",
+                    "options": [
+                        "China",
+                        "India",
+                        "Japan",
+                        "Korea"
+                    ],
+                    "answer": "India",
+                    "trivia": "The two dishes are nearly identical in preparation."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Spice and Texture",
+                    "difficulty": "medium",
+                    "question": "What accompaniment is commonly served with String Hoppers?",
+                    "options": [
+                        "Coconut Sambol",
+                        "Mayonnaise",
+                        "Cheese",
+                        "Ketchup"
+                    ],
+                    "answer": "Coconut Sambol",
+                    "trivia": "Sambol adds spice and texture."
+                },
+                {
+                    "chapter": 6,
+                    "title": "The Narrow Waterway",
+                    "difficulty": "medium",
+                    "question": "Which sea separates Sri Lanka from South India?",
+                    "options": [
+                        "Arabian Sea",
+                        "Red Sea",
+                        "Palk Strait",
+                        "South China Sea"
+                    ],
+                    "answer": "Palk Strait",
+                    "trivia": "This narrow waterway enabled centuries of food exchange."
+                },
+                {
+                    "chapter": 7,
+                    "title": "Morning Meals",
+                    "difficulty": "medium",
+                    "question": "String Hoppers are often eaten for:",
+                    "options": [
+                        "Breakfast",
+                        "Dessert only",
+                        "Festival sweets only",
+                        "Snacks only"
+                    ],
+                    "answer": "Breakfast",
+                    "trivia": "They provide an energizing start to the day."
+                },
+                {
+                    "chapter": 8,
+                    "title": "Shared Ingredients",
+                    "difficulty": "hard",
+                    "question": "Which ingredient links Sri Lankan and South Indian noodle traditions?",
+                    "options": [
+                        "Rice",
+                        "Rye",
+                        "Oats",
+                        "Potato"
+                    ],
+                    "answer": "Rice",
+                    "trivia": "Rice is the foundational grain of both culinary traditions."
+                },
+                {
+                    "chapter": 9,
+                    "title": "The Noodle Family",
+                    "difficulty": "hard",
+                    "question": "String Hoppers are an example of:",
+                    "options": [
+                        "Wheat noodles",
+                        "Rice noodles",
+                        "Glass noodles",
+                        "Egg noodles"
+                    ],
+                    "answer": "Rice noodles",
+                    "trivia": "This categorizes them within the massive pan-Asian rice noodle family."
+                },
+                {
+                    "chapter": 10,
+                    "title": "Maritime Boundaries",
+                    "difficulty": "hard",
+                    "question": "Why are String Hoppers important in connected food history?",
+                    "options": [
+                        "They show how food traditions crossed maritime boundaries.",
+                        "They use imported cheese.",
+                        "They originated in Europe.",
+                        "They are made from potatoes."
+                    ],
+                    "answer": "They show how food traditions crossed maritime boundaries.",
+                    "trivia": "They demonstrate how neighboring regions influence each other's cuisines through trade and migration."
+                }
+            ]
+        },
+        {
+            "country": "Myanmar",
+            "region": "Irrawaddy Delta",
+            "dish": "Mohinga",
+            "route": "Bay of Bengal Trade Network",
+            "description": "Explore Mohinga, the fish-based rice noodle soup reflecting Myanmar's position as a cultural crossroads.",
+            "history": "Because Myanmar sits between South Asia and Southeast Asia, its cuisine shows influences from both regions. Mohinga is a classic example of this cultural crossroads.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "A National Favorite",
+                    "difficulty": "easy",
+                    "question": "Which famous Myanmar dish combines rice noodles with a fish-based broth?",
+                    "options": [
+                        "Laksa",
+                        "Mohinga",
+                        "Phở",
+                        "Pad Thai"
+                    ],
+                    "answer": "Mohinga",
+                    "trivia": "Mohinga is often considered the country's national dish."
+                },
+                {
+                    "chapter": 2,
+                    "title": "The Base Broth",
+                    "difficulty": "easy",
+                    "question": "What is the primary protein used in Mohinga broth?",
+                    "options": [
+                        "Chicken",
+                        "Beef",
+                        "Pork",
+                        "Fish"
+                    ],
+                    "answer": "Fish",
+                    "trivia": "Usually, catfish is used to make the savory broth."
+                },
+                {
+                    "chapter": 3,
+                    "title": "The Core Carbohydrate",
+                    "difficulty": "easy",
+                    "question": "What type of noodles are essential for Mohinga?",
+                    "options": [
+                        "Egg noodles",
+                        "Rice vermicelli",
+                        "Wheat noodles",
+                        "Glass noodles"
+                    ],
+                    "answer": "Rice vermicelli",
+                    "trivia": "Rice noodles link Myanmar to broader Southeast Asian noodle traditions."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Thickening the Soup",
+                    "difficulty": "medium",
+                    "question": "What is commonly used to thicken the Mohinga broth?",
+                    "options": [
+                        "Cornstarch",
+                        "Toasted rice flour",
+                        "Potato flour",
+                        "Wheat flour"
+                    ],
+                    "answer": "Toasted rice flour",
+                    "trivia": "Toasted rice gives the broth a distinct nutty flavor and hearty texture."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Cultural Crossroads",
+                    "difficulty": "medium",
+                    "question": "Myanmar's food history shows influences from which two major regions?",
+                    "options": [
+                        "Europe and Africa",
+                        "South Asia and Southeast Asia",
+                        "East Asia and Central Asia",
+                        "Middle East and Europe"
+                    ],
+                    "answer": "South Asia and Southeast Asia",
+                    "trivia": "Myanmar's geography made it a bridge between the Indian subcontinent and Southeast Asia."
+                },
+                {
+                    "chapter": 6,
+                    "title": "Morning Routine",
+                    "difficulty": "medium",
+                    "question": "When is Mohinga most traditionally eaten?",
+                    "options": [
+                        "Breakfast",
+                        "Lunch",
+                        "Dinner",
+                        "Midnight snack"
+                    ],
+                    "answer": "Breakfast",
+                    "trivia": "It is widely available from street vendors early in the morning."
+                },
+                {
+                    "chapter": 7,
+                    "title": "Aromatic Additions",
+                    "difficulty": "medium",
+                    "question": "Which aromatic ingredient is key to the flavor profile of Mohinga?",
+                    "options": [
+                        "Rosemary",
+                        "Lemongrass",
+                        "Thyme",
+                        "Oregano"
+                    ],
+                    "answer": "Lemongrass",
+                    "trivia": "Lemongrass imparts a bright, citrusy note that cuts through the fish broth."
+                },
+                {
+                    "chapter": 8,
+                    "title": "The Perfect Crunch",
+                    "difficulty": "hard",
+                    "question": "What is a common topping added to Mohinga for texture?",
+                    "options": [
+                        "Croutons",
+                        "Crispy split chickpea fritters",
+                        "Tortilla chips",
+                        "Toasted almonds"
+                    ],
+                    "answer": "Crispy split chickpea fritters",
+                    "trivia": "Fritters provide a satisfying crunch against the soft noodles."
+                },
+                {
+                    "chapter": 9,
+                    "title": "River Connections",
+                    "difficulty": "hard",
+                    "question": "Which river delta is historically significant for Myanmar's rice and fish production?",
+                    "options": [
+                        "Mekong",
+                        "Ganges",
+                        "Irrawaddy",
+                        "Yangtze"
+                    ],
+                    "answer": "Irrawaddy",
+                    "trivia": "The Irrawaddy Delta is the agricultural heartland of Myanmar."
+                },
+                {
+                    "chapter": 10,
+                    "title": "Following the Noodles",
+                    "difficulty": "hard",
+                    "question": "What does Mohinga demonstrate about rice noodles?",
+                    "options": [
+                        "They only exist in one country",
+                        "They evolved as they traveled along trade routes",
+                        "They were invented by Europeans",
+                        "They are made from wheat"
+                    ],
+                    "answer": "They evolved as they traveled along trade routes",
+                    "trivia": "Rice noodles adapted to local ingredients and tastes wherever they went."
+                }
+            ]
+        },
+        {
+            "country": "Thailand",
+            "region": "Central Plains",
+            "dish": "Khanom Chin",
+            "route": "Gulf of Thailand Trade Route",
+            "description": "Discover Thailand's fermented rice noodles and their complex cultural origins.",
+            "history": "Despite its name, Khanom Chin does not mean 'Chinese noodles.' Historians believe the term derives from a Mon language expression, reflecting Southeast Asia's complex cultural exchanges.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "What's in a Name?",
+                    "difficulty": "easy",
+                    "question": "What are Thailand's fermented rice noodles called?",
+                    "options": [
+                        "Bún",
+                        "Mee Hoon",
+                        "String Hoppers",
+                        "Khanom Chin"
+                    ],
+                    "answer": "Khanom Chin",
+                    "trivia": "They are often served with a variety of rich, spicy curries."
+                },
+                {
+                    "chapter": 2,
+                    "title": "Not Chinese",
+                    "difficulty": "easy",
+                    "question": "Which ethnolinguistic group likely inspired the name Khanom Chin?",
+                    "options": [
+                        "The Mon people",
+                        "The Han Chinese",
+                        "The Japanese",
+                        "The Portuguese"
+                    ],
+                    "answer": "The Mon people",
+                    "trivia": "The name likely comes from the Mon words 'hanom cin' meaning boiled noodles."
+                },
+                {
+                    "chapter": 3,
+                    "title": "The Fermentation Factor",
+                    "difficulty": "easy",
+                    "question": "What distinguishes Khanom Chin from many other rice noodles?",
+                    "options": [
+                        "They are baked",
+                        "The rice dough is slightly fermented",
+                        "They are made of wheat",
+                        "They are served dry"
+                    ],
+                    "answer": "The rice dough is slightly fermented",
+                    "trivia": "Fermentation gives them a distinct texture and a slight tang."
+                },
+                {
+                    "chapter": 4,
+                    "title": "The Classic Pairing",
+                    "difficulty": "medium",
+                    "question": "Khanom Chin is traditionally eaten with what type of sauce?",
+                    "options": [
+                        "Soy sauce",
+                        "Tomato sauce",
+                        "Curries (like Nam Ya)",
+                        "Cheese sauce"
+                    ],
+                    "answer": "Curries (like Nam Ya)",
+                    "trivia": "Nam Ya is a popular fish-based curry specifically made for these noodles."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Freshness First",
+                    "difficulty": "medium",
+                    "question": "How are Khanom Chin noodles typically sold in traditional markets?",
+                    "options": [
+                        "Dried in plastic bags",
+                        "Freshly made daily",
+                        "Frozen",
+                        "Canned"
+                    ],
+                    "answer": "Freshly made daily",
+                    "trivia": "They are usually formed into small, neat bundles or nests."
+                },
+                {
+                    "chapter": 6,
+                    "title": "Symbolism in Food",
+                    "difficulty": "medium",
+                    "question": "Why are Khanom Chin sometimes served at weddings or ceremonies?",
+                    "options": [
+                        "They are cheap",
+                        "The long noodles symbolize long life and enduring love",
+                        "They are easy to carry",
+                        "They are red"
+                    ],
+                    "answer": "The long noodles symbolize long life and enduring love",
+                    "trivia": "Noodles carry significant cultural symbolism across many Asian cultures."
+                },
+                {
+                    "chapter": 7,
+                    "title": "Herb Garden",
+                    "difficulty": "medium",
+                    "question": "What is typically served alongside a plate of Khanom Chin?",
+                    "options": [
+                        "French fries",
+                        "A large platter of fresh vegetables and herbs",
+                        "Mashed potatoes",
+                        "Garlic bread"
+                    ],
+                    "answer": "A large platter of fresh vegetables and herbs",
+                    "trivia": "Diners customize their bowls with fresh basil, bean sprouts, cabbage, and more."
+                },
+                {
+                    "chapter": 8,
+                    "title": "Regional Differences",
+                    "difficulty": "hard",
+                    "question": "How does Khanom Chin vary across Thailand?",
+                    "options": [
+                        "The noodles change shape",
+                        "It is only eaten in the North",
+                        "Different regions serve it with their own unique local curries",
+                        "It doesn't vary"
+                    ],
+                    "answer": "Different regions serve it with their own unique local curries",
+                    "trivia": "Southern Thailand favors much spicier curries compared to the Central plains."
+                },
+                {
+                    "chapter": 9,
+                    "title": "The Shared Noodle",
+                    "difficulty": "hard",
+                    "question": "Which Vietnamese noodle shares a similar historical connection to Khanom Chin?",
+                    "options": [
+                        "Bún",
+                        "Phở",
+                        "Mi Goreng",
+                        "Udon"
+                    ],
+                    "answer": "Bún",
+                    "trivia": "Both are extruded, round rice noodles with ancient Southeast Asian roots."
+                },
+                {
+                    "chapter": 10,
+                    "title": "Cultural Exchange",
+                    "difficulty": "hard",
+                    "question": "The history of Khanom Chin shows that food names can often be:",
+                    "options": [
+                        "Perfectly accurate",
+                        "Misleading clues to complex cultural exchanges",
+                        "Unimportant",
+                        "Legally protected"
+                    ],
+                    "answer": "Misleading clues to complex cultural exchanges",
+                    "trivia": "Food histories are rarely straightforward and often reveal surprising connections."
+                }
+            ]
+        },
+        {
+            "country": "Vietnam",
+            "region": "Red River Delta",
+            "dish": "Phở",
+            "route": "South China Sea Trade Network",
+            "description": "Uncover the origins of Vietnam's most famous rice noodle soup.",
+            "history": "Phở became globally famous in the 20th century, but the rice noodles used in it belong to a much older family of rice-based foods found throughout Asia. It reflects a fascinating blend of local ingredients, Chinese culinary techniques, and French colonial influence.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "The Famous Soup",
+                    "difficulty": "easy",
+                    "question": "Which famous Vietnamese dish features flat rice noodles served in a fragrant broth?",
+                    "options": [
+                        "Laksa",
+                        "Mohinga",
+                        "Phở",
+                        "Mee Goreng"
+                    ],
+                    "answer": "Phở",
+                    "trivia": "It is arguably Vietnam's most internationally recognized dish."
+                },
+                {
+                    "chapter": 2,
+                    "title": "The Noodle Type",
+                    "difficulty": "easy",
+                    "question": "What distinguishes the noodles used in Phở (Bánh Phở) from Bún?",
+                    "options": [
+                        "They are made of wheat",
+                        "They are flat rather than round",
+                        "They are purple",
+                        "They are fried"
+                    ],
+                    "answer": "They are flat rather than round",
+                    "trivia": "Flat rice noodles are ideal for absorbing the flavorful broth."
+                },
+                {
+                    "chapter": 3,
+                    "title": "The Other Noodle",
+                    "difficulty": "easy",
+                    "question": "What is the name of Vietnam's round rice noodles?",
+                    "options": [
+                        "Bún",
+                        "Udon",
+                        "Soba",
+                        "Ramen"
+                    ],
+                    "answer": "Bún",
+                    "trivia": "Bún is commonly used in dishes like Bún Chả."
+                },
+                {
+                    "chapter": 4,
+                    "title": "A Modern Classic",
+                    "difficulty": "medium",
+                    "question": "When did Phở, as we know it today, likely originate?",
+                    "options": [
+                        "1000 BCE",
+                        "Early 20th century",
+                        "The 18th century",
+                        "Last year"
+                    ],
+                    "answer": "Early 20th century",
+                    "trivia": "It originated in northern Vietnam, near Hanoi and Nam Dinh."
+                },
+                {
+                    "chapter": 5,
+                    "title": "The French Connection",
+                    "difficulty": "medium",
+                    "question": "Which colonial influence increased the consumption of beef in Vietnam, leading to Beef Phở?",
+                    "options": [
+                        "British",
+                        "Spanish",
+                        "French",
+                        "Dutch"
+                    ],
+                    "answer": "French",
+                    "trivia": "Some historians link the word Phở to the French dish 'pot-au-feu'."
+                },
+                {
+                    "chapter": 6,
+                    "title": "The Chinese Influence",
+                    "difficulty": "medium",
+                    "question": "Which group heavily influenced the flat rice noodle making techniques in Vietnam?",
+                    "options": [
+                        "The French",
+                        "Chinese migrants",
+                        "Indian traders",
+                        "Arab merchants"
+                    ],
+                    "answer": "Chinese migrants",
+                    "trivia": "Techniques for milling and steaming rice flour sheets arrived via ancient trade routes."
+                },
+                {
+                    "chapter": 7,
+                    "title": "Aromatic Garnishes",
+                    "difficulty": "medium",
+                    "question": "Which fresh herbs are classically served with Southern-style Phở?",
+                    "options": [
+                        "Rosemary and thyme",
+                        "Thai basil, mint, and cilantro",
+                        "Parsley and sage",
+                        "Dill and chives"
+                    ],
+                    "answer": "Thai basil, mint, and cilantro",
+                    "trivia": "Southern Vietnamese cuisine often features an abundance of fresh, fragrant herbs."
+                },
+                {
+                    "chapter": 8,
+                    "title": "A Tale of Two Cities",
+                    "difficulty": "hard",
+                    "question": "How does Northern Phở differ from Southern Phở?",
+                    "options": [
+                        "It uses chicken instead of beef",
+                        "It has a simpler, clearer broth with fewer herbs",
+                        "It is served cold",
+                        "It has no noodles"
+                    ],
+                    "answer": "It has a simpler, clearer broth with fewer herbs",
+                    "trivia": "Northern Phở (Phở Bắc) focuses heavily on the purity of the beef broth."
+                },
+                {
+                    "chapter": 9,
+                    "title": "The Perfect Texture",
+                    "difficulty": "hard",
+                    "question": "What texture is considered ideal for Bánh Phở noodles?",
+                    "options": [
+                        "Crunchy",
+                        "Chewy and soft",
+                        "Hard",
+                        "Mushy"
+                    ],
+                    "answer": "Chewy and soft",
+                    "trivia": "The balance of chewiness and softness is highly prized."
+                },
+                {
+                    "chapter": 10,
+                    "title": "A Global Journey",
+                    "difficulty": "hard",
+                    "question": "What major historical event led to the global spread of Phở?",
+                    "options": [
+                        "The spice trade",
+                        "The Vietnam War and subsequent diaspora",
+                        "The building of the Suez Canal",
+                        "The invention of airplanes"
+                    ],
+                    "answer": "The Vietnam War and subsequent diaspora",
+                    "trivia": "Vietnamese refugees brought their culinary traditions to North America, Europe, and Australia."
+                }
+            ]
         }
     ]
 }

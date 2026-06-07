@@ -24,13 +24,24 @@
                 <!-- Full Maritime Route -->
                 <path id="maritime-route" d="M 68.5 46 Q 69 49 69 53 Q 72 53 74 55 Q 76 55 79 55 Q 78.5 58 78 61" stroke="#00a8e8" stroke-width="0.5" fill="none" class="maritime-path" />
                 
-                <!-- Animated Ship -->
-                <text font-size="2.5" fill="#fff" dominant-baseline="central">
-                    <textPath href="#maritime-route" startOffset="0%">
-                        🚢
-                        <animate attributeName="startOffset" from="0%" to="100%" dur="15s" repeatCount="indefinite" />
-                    </textPath>
-                </text>
+                <!-- Animated Antique Ship -->
+                <g>
+                    <animateMotion dur="25s" repeatCount="indefinite" rotate="auto">
+                        <mpath href="#maritime-route"/>
+                    </animateMotion>
+                    <g transform="scale(0.25)">
+                        <!-- Hull -->
+                        <path d="M -6 2 L -4 5 L 4 5 L 7 1 L -6 2 Z" fill="#3b2011" />
+                        <!-- Mast -->
+                        <line x1="0" y1="2" x2="0" y2="-9" stroke="#2a1408" stroke-width="1" />
+                        <!-- Main Sail -->
+                        <path d="M 0 -8 Q 6 -5 5 -1 Q 0 -1 0 -2 Z" fill="#8c7355" />
+                        <!-- Back Sail -->
+                        <path d="M 0 -7 Q -4 -4 -3 -1 Q 0 -1 0 -2 Z" fill="#8c7355" />
+                        <!-- Pennant -->
+                        <path d="M 0 -9 L 3 -8 L 0 -7 Z" fill="#8b0000" />
+                    </g>
+                </g>
             </svg>
 
             <!-- Markers -->

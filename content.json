@@ -609,6 +609,86 @@
                     "trivia": "Food historians often follow words the way archaeologists follow artifacts."
                 }
             ]
+        },
+        {
+            "country": "Malaysia",
+            "region": "Peninsular Malaysia",
+            "dish": "Roti Jala",
+            "route": "Strait of Malacca Trade Network",
+            "description": "Discover how batter, technique, and trade created one of Southeast Asia's most visually distinctive foods.",
+            "history": "Roti Jala, meaning 'net bread', is a Malaysian dish famous for its lace-like appearance. Though not a descendant of appam, it illustrates how maritime trade and cultural exchange shaped batter-based foods across Southeast Asia.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "The Net Bread",
+                    "difficulty": "easy",
+                    "question": "Which Malaysian dish looks like a fishing net but is actually eaten with curry?",
+                    "options": [
+                        "Ketupat",
+                        "Kuih Lapis",
+                        "Popiah",
+                        "Roti Jala"
+                    ],
+                    "answer": "Roti Jala",
+                    "trivia": "'Jala' means 'net' in Malay."
+                },
+                {
+                    "chapter": 2,
+                    "title": "Different Family Tree",
+                    "difficulty": "easy",
+                    "question": "Despite often being discussed alongside appam, what makes Roti Jala different?",
+                    "options": [
+                        "It uses rice",
+                        "It uses coconut milk",
+                        "It is not actually an appam descendant but a separate batter-based tradition",
+                        "It originated in Kerala"
+                    ],
+                    "answer": "It is not actually an appam descendant but a separate batter-based tradition",
+                    "trivia": "Roti Jala and appam share cultural influences, but not the same family tree."
+                },
+                {
+                    "chapter": 3,
+                    "title": "The Special Tool",
+                    "difficulty": "medium",
+                    "question": "What piece of equipment gives Roti Jala its distinctive appearance?",
+                    "options": [
+                        "Clay oven",
+                        "Stone grinder",
+                        "Bamboo steamer",
+                        "A special multi-spouted mold used to pour batter"
+                    ],
+                    "answer": "A special multi-spouted mold used to pour batter",
+                    "trivia": "The cooking tool is so important that it essentially defines the dish."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Technique Matters",
+                    "difficulty": "medium",
+                    "question": "Why do historians sometimes compare Roti Jala and appam?",
+                    "options": [
+                        "Both are stuffed with peanuts",
+                        "Both originated in Sri Lanka",
+                        "Both transform liquid batter into visually striking designs through skilled cooking techniques",
+                        "Both are baked in ovens"
+                    ],
+                    "answer": "Both transform liquid batter into visually striking designs through skilled cooking techniques",
+                    "trivia": "In many traditional cuisines, appearance was considered just as important as flavor."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Crossroads of Trade",
+                    "difficulty": "hard",
+                    "question": "What does Roti Jala reveal about Malaysia's history?",
+                    "options": [
+                        "Malaysia developed in isolation",
+                        "Rice was unknown there",
+                        "The region absorbed influences from Indian, Malay, Arab, and later colonial food cultures",
+                        "Curry arrived only recently"
+                    ],
+                    "answer": "The region absorbed influences from Indian, Malay, Arab, and later colonial food cultures",
+                    "trivia": "Malaysia sits on the Strait of Malacca, one of the busiest trade corridors in world history."
+                }
+            ]
         }
     ]
 }

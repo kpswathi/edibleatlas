@@ -6,7 +6,7 @@ const countryInfo = {
     "Malaysia": { emoji: "🇲🇾", bg: "assets/japan_street_1778310737300.png", defaultDishEmoji: "🫓" },
     "Myanmar": { emoji: "🇲🇲", bg: "assets/india_market_1778310758930.png", defaultDishEmoji: "🥞" },
     "Indonesia": { emoji: "🇮🇩", bg: "assets/indonesia_feast.png", defaultDishEmoji: "🥞" },
-    "Singapore": { emoji: "🇸🇬", bg: "assets/japan_street_1778310737300.png", defaultDishEmoji: "🫓" }
+    "Brunei": { emoji: "🇧🇳", bg: "assets/japan_street_1778310737300.png", defaultDishEmoji: "🫓" }
 };
 
 // Web Audio API for UI sounds

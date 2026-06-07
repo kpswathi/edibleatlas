@@ -463,6 +463,152 @@
                     "trivia": "Kue apem reflects a blend of South Asian fermentation traditions, Islamic influence, and Javanese ritual culture."
                 }
             ]
+        },
+        {
+            "country": "Malaysia",
+            "region": "Peninsular Malaysia",
+            "dish": "Apam Balik",
+            "route": "Indian Ocean Trade Network",
+            "description": "Explore how the word 'apam' survived across maritime Asia while recipes evolved into entirely new foods.",
+            "history": "Apam Balik is one of Malaysia's most famous market snacks. Although it looks very different from South Indian appam, historians believe the survival of the word 'apam' preserves evidence of ancient trade and cultural exchange across the Indian Ocean.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "The Name That Traveled",
+                    "difficulty": "easy",
+                    "question": "Which clue most strongly suggests that Apam Balik may share distant roots with South Indian appam?",
+                    "options": [
+                        "Both use peanuts",
+                        "Both are sold in markets",
+                        "The survival of the word 'apam' in the name",
+                        "Both are eaten for breakfast"
+                    ],
+                    "answer": "The survival of the word 'apam' in the name",
+                    "trivia": "The word 'apam' appears across India, Sri Lanka, Indonesia, Malaysia, Brunei, and parts of the Philippines."
+                },
+                {
+                    "chapter": 2,
+                    "title": "Recipes Change",
+                    "difficulty": "easy",
+                    "question": "If you served a Kerala appam and an Apam Balik side by side, what would surprise most people?",
+                    "options": [
+                        "They taste identical",
+                        "They are cooked in the same pan",
+                        "They look completely different despite sharing a historical connection",
+                        "Both contain curry"
+                    ],
+                    "answer": "They look completely different despite sharing a historical connection",
+                    "trivia": "As foods travel, names often survive while recipes evolve dramatically."
+                },
+                {
+                    "chapter": 3,
+                    "title": "Cultural Fusion",
+                    "difficulty": "medium",
+                    "question": "Why is Apam Balik considered evidence of centuries of cultural mixing in Southeast Asia?",
+                    "options": [
+                        "It uses only Malay ingredients",
+                        "It remained unchanged for 1,000 years",
+                        "It combines Indian-derived food traditions with Chinese and local influences",
+                        "It was created by European colonists"
+                    ],
+                    "answer": "It combines Indian-derived food traditions with Chinese and local influences",
+                    "trivia": "Many modern Apam Balik recipes reflect Chinese-Malay culinary fusion rather than their original Indian influences."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Food Migration",
+                    "difficulty": "medium",
+                    "question": "What does Apam Balik teach historians about food migration?",
+                    "options": [
+                        "Foods stay the same wherever they go",
+                        "Trade only spreads ingredients",
+                        "Recipes change, but names sometimes survive for centuries",
+                        "Food names are unreliable historical evidence"
+                    ],
+                    "answer": "Recipes change, but names sometimes survive for centuries",
+                    "trivia": "A food's name can sometimes travel farther than the original recipe itself."
+                },
+                {
+                    "chapter": 5,
+                    "title": "Following the Clues",
+                    "difficulty": "hard",
+                    "question": "Why would a historian be more interested in the word 'apam' than the peanut filling?",
+                    "options": [
+                        "Peanuts are not edible",
+                        "The filling is newer than the name",
+                        "The word may preserve evidence of ancient trade networks",
+                        "Historians do not study ingredients"
+                    ],
+                    "answer": "The word may preserve evidence of ancient trade networks",
+                    "trivia": "The peanut filling likely arrived much later than the original batter traditions."
+                }
+            ]
+        },
+        {
+            "country": "Brunei",
+            "region": "Borneo",
+            "dish": "Apam Berkuah",
+            "route": "Malay Archipelago Trade Network",
+            "description": "Follow how the appam family adapted across the Malay world into a unique dessert served with sweet sauce.",
+            "history": "Apam Berkuah is a Bruneian dessert whose name preserves the ancient 'apam' tradition that spread through maritime Asia. Although the dish evolved significantly, its name and preparation reveal centuries of movement, trade, and cultural exchange across the Malay Archipelago.",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "title": "Cake With Sauce",
+                    "difficulty": "easy",
+                    "question": "What makes Apam Berkuah unusual compared to many other appam descendants?",
+                    "options": [
+                        "It contains no coconut",
+                        "It is always savory",
+                        "It is served with a sauce, turning a cake into a dessert experience",
+                        "It is made from wheat"
+                    ],
+                    "answer": "It is served with a sauce, turning a cake into a dessert experience",
+                    "trivia": "'Berkuah' literally means 'with gravy' or 'with sauce'."
+                },
+                {
+                    "chapter": 2,
+                    "title": "Changing Tastes",
+                    "difficulty": "medium",
+                    "question": "What does Apam Berkuah reveal about how foods change when they travel?",
+                    "options": [
+                        "Recipes never adapt",
+                        "Trade spreads identical foods everywhere",
+                        "Local communities reshape imported foods to match local tastes",
+                        "Names always change immediately"
+                    ],
+                    "answer": "Local communities reshape imported foods to match local tastes",
+                    "trivia": "The word 'apam' survived, but the serving style evolved."
+                },
+                {
+                    "chapter": 3,
+                    "title": "A Maritime Kingdom",
+                    "difficulty": "medium",
+                    "question": "Why is Brunei important in the story of appam's spread across Asia?",
+                    "options": [
+                        "It invented appam",
+                        "It had no maritime trade",
+                        "It was part of a vast trading network connecting Southeast Asia with India and beyond",
+                        "Rice was rarely eaten there"
+                    ],
+                    "answer": "It was part of a vast trading network connecting Southeast Asia with India and beyond",
+                    "trivia": "Brunei's food history reflects centuries of movement across the Malay Archipelago."
+                },
+                {
+                    "chapter": 4,
+                    "title": "Following the Word",
+                    "difficulty": "hard",
+                    "question": "What is the strongest evidence linking Apam Berkuah to the wider appam family?",
+                    "options": [
+                        "The shape is identical to Kerala appam",
+                        "The recipe never changed",
+                        "The survival of the word 'apam' across regions connected by trade",
+                        "It is always eaten for breakfast"
+                    ],
+                    "answer": "The survival of the word 'apam' across regions connected by trade",
+                    "trivia": "Food historians often follow words the way archaeologists follow artifacts."
+                }
+            ]
         }
     ]
 }
